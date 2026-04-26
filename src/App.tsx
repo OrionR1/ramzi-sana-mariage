@@ -51,6 +51,7 @@ export default function App() {
     return saved === 'en' ? 'en' : 'fr';
   });
   const [introPhase, setIntroPhase] = useState<'closed' | 'opening' | 'open'>('closed');
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const calendarLinks = useMemo(() => buildCalendarLinks(), []);
 
@@ -334,9 +335,16 @@ export default function App() {
 
             <section className="section faq-section" id={sectionIds.faq}>
               <SectionTitle title={t(weddingContent.faq.title)} />
-              <div className="faq-list">
-                {weddingContent.faq.items.map((item) => (
-                  <FAQItem key={item.question.en} question={item.question[language]} answer={item.answer[language]} />
+              <div className="faq-list reveal">
+                {weddingContent.faq.items.map((item, index) => (
+                  <FAQItem
+                    key={item.question.en}
+                    id={`faq-item-${index}`}
+                    question={item.question[language]}
+                    answer={item.answer[language]}
+                    open={openFaqIndex === index}
+                    onToggle={() => setOpenFaqIndex((current) => (current === index ? null : index))}
+                  />
                 ))}
               </div>
             </section>

@@ -1,20 +1,25 @@
-import { useState } from 'react';
-
 type FAQItemProps = {
+  id: string;
   question: string;
   answer: string;
+  open: boolean;
+  onToggle: () => void;
 };
 
-export function FAQItem({ question, answer }: FAQItemProps) {
-  const [open, setOpen] = useState(false);
-
+export function FAQItem({ id, question, answer, open, onToggle }: FAQItemProps) {
   return (
-    <div className={`faq-item reveal ${open ? 'is-open' : ''}`}>
-      <button type="button" className="faq-question" onClick={() => setOpen((value) => !value)}>
+    <div className={`faq-item ${open ? 'is-open' : ''}`}>
+      <button
+        type="button"
+        className="faq-question"
+        onClick={onToggle}
+        aria-expanded={open}
+        aria-controls={id}
+      >
         <span>{question}</span>
         <span aria-hidden="true">{open ? '−' : '+'}</span>
       </button>
-      <div className="faq-answer" hidden={!open}>
+      <div className="faq-answer" id={id} hidden={!open}>
         <p>{answer}</p>
       </div>
     </div>
