@@ -61,7 +61,7 @@ button {
 
 .app-shell {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .app-shell::before {
@@ -137,7 +137,7 @@ main,
   inset: 0;
   display: grid;
   place-items: center;
-  padding: 1rem;
+  padding: max(1rem, env(safe-area-inset-top)) 1rem max(1rem, env(safe-area-inset-bottom));
   perspective: 1600px;
   background:
     radial-gradient(circle at 50% 18%, rgba(233, 202, 152, 0.42), transparent 20%),
@@ -145,7 +145,7 @@ main,
   transition:
     opacity 900ms ease,
     visibility 900ms ease;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .invitation-gate.is-open {
@@ -208,6 +208,7 @@ main,
   width: min(100%, 560px);
   position: relative;
   padding-top: 4.5rem;
+  padding-bottom: 1rem;
   z-index: 2;
 }
 
@@ -324,10 +325,6 @@ main,
   margin-bottom: 1.1rem;
 }
 
-.gate-button {
-  display: none;
-}
-
 .gate-seal-button {
   position: relative;
   width: 118px;
@@ -409,6 +406,7 @@ main,
 }
 
 .site-shell {
+  min-height: 100vh;
   opacity: 0;
   transform: scale(1.02) translateY(18px);
   filter: blur(10px);
@@ -509,7 +507,7 @@ main {
 }
 
 .hero {
-  min-height: 92vh;
+  min-height: min(92vh, 920px);
   display: flex;
   align-items: center;
 }
@@ -955,6 +953,44 @@ main {
     display: none;
   }
 
+}
+
+@media (max-width: 640px) {
+  .invitation-gate {
+    place-items: start center;
+    padding-top: 1.25rem;
+  }
+
+  .envelope-shell {
+    padding-top: 3.25rem;
+  }
+
+  .envelope-top {
+    width: calc(100% - 1.5rem);
+    height: 5.4rem;
+  }
+
+  .envelope-card {
+    padding: 1.5rem 1rem 1.25rem;
+  }
+
+  .envelope-card h2 {
+    font-size: clamp(2.8rem, 18vw, 4.7rem);
+  }
+
+  .gate-title {
+    font-size: 0.92rem;
+  }
+
+  .gate-body {
+    margin-bottom: 1rem;
+    font-size: 0.92rem;
+  }
+
+  .gate-seal-button {
+    width: 104px;
+    height: 104px;
+  }
 }
 
 @media (min-width: 1024px) {

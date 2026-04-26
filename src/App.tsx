@@ -101,7 +101,7 @@ export default function App() {
 
   const isInvitationOpen = introPhase === 'open';
   const isIntroOpening = introPhase === 'opening';
-  const isSiteVisible = introPhase !== 'closed';
+  const isSiteVisible = introPhase === 'open';
 
   return (
     <div className={`app-shell ${isInvitationOpen ? 'invitation-open' : ''}`}>
@@ -139,9 +139,6 @@ export default function App() {
                 <strong>{t(weddingContent.intro.cta)}</strong>
                 <small>{weddingContent.date.display[language]}</small>
               </span>
-            </button>
-            <button type="button" className="button button-primary gate-button" onClick={openInvitation}>
-              {t(weddingContent.intro.cta)}
             </button>
             <p className="gate-hint">{t(weddingContent.intro.hint)}</p>
           </div>
@@ -264,7 +261,7 @@ export default function App() {
               <div className="rsvp-panel reveal">
                 <p>
                   {language === 'fr'
-                    ? `Merci de nous repondre avant le ${rsvpDeadline}.`
+                    ? `Merci de nous répondre avant le ${rsvpDeadline}.`
                     : `Please reply before ${rsvpDeadline}.`}
                 </p>
                 <div className="hero-actions">
