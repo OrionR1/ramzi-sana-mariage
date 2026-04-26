@@ -119,18 +119,24 @@ export default function App() {
       >
         <div className="gate-panel gate-panel-left" aria-hidden="true" />
         <div className="gate-panel gate-panel-right" aria-hidden="true" />
+        <div className="gate-panel-edge gate-panel-edge-left" aria-hidden="true" />
+        <div className="gate-panel-edge gate-panel-edge-right" aria-hidden="true" />
         <div className="gate-glow" />
-        <div className="envelope-shell">
-          <div className="envelope-top" />
-          <div className="envelope-card">
+        <div className="gate-stage">
+          <div className="gate-orbit gate-orbit-one" aria-hidden="true" />
+          <div className="gate-orbit gate-orbit-two" aria-hidden="true" />
+          <div className="gate-marquee" aria-hidden="true" />
+          <div className="gate-card">
             <p className="gate-overline">{t(weddingContent.intro.overline)}</p>
             <h2 className="gate-couple" aria-label={weddingContent.couple}>
               <span>{weddingContent.names.first}</span>
               <span className="gate-ampersand">&amp;</span>
               <span>{weddingContent.names.second}</span>
             </h2>
-            <p className="gate-title">{t(weddingContent.intro.title)}</p>
-            <p className="gate-body">{t(weddingContent.intro.body)}</p>
+            <div className="gate-copy">
+              <p className="gate-title">{t(weddingContent.intro.title)}</p>
+              <p className="gate-body">{t(weddingContent.intro.body)}</p>
+            </div>
             <div className="gate-language">
               <LanguageSwitch
                 language={language}
