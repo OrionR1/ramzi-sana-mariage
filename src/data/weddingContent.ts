@@ -79,8 +79,8 @@ export const weddingContent = {
     floatingRsvp: { fr: 'RSVP', en: 'RSVP' },
   },
   images: {
-    hero: '/pics/AD037E47-D4D3-4640-879B-01A821A13B0A.jpeg',
-    venue: '/pics/domaine.jpg',
+    hero: 'pics/AD037E47-D4D3-4640-879B-01A821A13B0A.jpeg',
+    venue: 'pics/domaine.jpg',
   },
   intro: {
     overline: {
@@ -387,7 +387,7 @@ export const weddingContent = {
       {
         title: { fr: 'Le domaine', en: 'The estate' },
         caption: { fr: 'Le lieu', en: 'The venue' },
-        image: '/pics/domaine.jpg',
+        image: 'pics/domaine.jpg',
         alt: {
           fr: 'Le Domaine de la Geneste à Châteaufort',
           en: 'Domaine de la Geneste in Châteaufort',
@@ -396,7 +396,7 @@ export const weddingContent = {
       {
         title: { fr: 'Nous', en: 'Us' },
         caption: { fr: 'Portrait', en: 'Portrait' },
-        image: '/pics/44FAACDF-8F67-4297-8215-C6384873A08C_1_105_c.jpeg',
+        image: 'pics/44FAACDF-8F67-4297-8215-C6384873A08C_1_105_c.jpeg',
         alt: {
           fr: 'Ramzi et Sana',
           en: 'Ramzi and Sana',
@@ -405,7 +405,7 @@ export const weddingContent = {
       {
         title: { fr: 'La nuit', en: 'The night' },
         caption: { fr: 'Ambiance', en: 'Mood' },
-        image: '/pics/83A3EA6C-1B04-47F1-83F0-2DA0C8C61CE0_4_5005_c.jpeg',
+        image: 'pics/83A3EA6C-1B04-47F1-83F0-2DA0C8C61CE0_4_5005_c.jpeg',
         alt: {
           fr: 'Ambiance de la soirée',
           en: 'Evening atmosphere',
