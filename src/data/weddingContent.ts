@@ -79,7 +79,7 @@ export const weddingContent = {
     floatingRsvp: { fr: 'RSVP', en: 'RSVP' },
   },
   images: {
-    hero: 'pics/AD037E47-D4D3-4640-879B-01A821A13B0A.jpeg',
+    hero: 'pics/AD6693BE-EA31-4DC5-B8DB-64E7D733DDB9_1_105_c.jpeg',
     venue: 'pics/domaine.jpg',
   },
   intro: {
