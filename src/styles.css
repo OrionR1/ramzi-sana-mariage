@@ -140,8 +140,8 @@ main,
   padding: max(1rem, env(safe-area-inset-top)) 1rem max(1rem, env(safe-area-inset-bottom));
   perspective: 1600px;
   background:
-    radial-gradient(circle at 50% 18%, rgba(233, 202, 152, 0.42), transparent 20%),
-    linear-gradient(180deg, #f7eee2 0%, #f1e2cf 100%);
+    radial-gradient(circle at 50% 30%, rgba(232, 190, 121, 0.16), transparent 18%),
+    linear-gradient(180deg, #1f1117 0%, #2d1720 35%, #120c10 100%);
   transition:
     opacity 900ms ease,
     visibility 900ms ease;
@@ -231,10 +231,10 @@ main,
 
 .gate-glow {
   position: absolute;
-  inset: 18% 20%;
+  inset: 16% 28%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(215, 178, 123, 0.22), transparent 60%);
-  filter: blur(18px);
+  background: radial-gradient(circle, rgba(233, 202, 152, 0.34), transparent 62%);
+  filter: blur(28px);
   transition: transform 1200ms ease, opacity 1200ms ease;
 }
 
@@ -257,8 +257,8 @@ main,
   width: calc(100% - 1rem);
   transform: translateX(-50%);
   border-radius: 32px;
-  border: 1px solid rgba(249, 228, 199, 0.22);
-  opacity: 0.55;
+  border: 1px solid rgba(249, 228, 199, 0.12);
+  opacity: 0.42;
 }
 
 .gate-card {
@@ -266,11 +266,11 @@ main,
   padding: 3.2rem 1.8rem 2rem;
   border-radius: 32px;
   background:
-    radial-gradient(circle at top, rgba(255, 242, 221, 0.88), rgba(249, 240, 227, 0.97) 40%, rgba(246, 235, 220, 0.96) 100%);
-  border: 1px solid rgba(118, 81, 55, 0.14);
+    linear-gradient(180deg, rgba(32, 19, 24, 0.9), rgba(26, 15, 20, 0.96));
+  border: 1px solid rgba(247, 223, 191, 0.12);
   box-shadow:
-    0 28px 80px rgba(99, 70, 50, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    0 28px 80px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
   overflow: hidden;
   text-align: center;
   transition:
@@ -284,8 +284,8 @@ main,
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, transparent 0, transparent 40%, rgba(184, 100, 111, 0.06) 50%, transparent 60%, transparent 100%),
-    radial-gradient(circle at 50% 0%, rgba(214, 178, 121, 0.22), transparent 30%);
+    linear-gradient(135deg, transparent 0, transparent 40%, rgba(184, 100, 111, 0.08) 50%, transparent 60%, transparent 100%),
+    radial-gradient(circle at 50% 0%, rgba(214, 178, 121, 0.14), transparent 30%);
   pointer-events: none;
 }
 
@@ -299,7 +299,7 @@ main,
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 0.72rem;
-  color: var(--rose-deep);
+  color: rgba(240, 224, 202, 0.76);
 }
 
 .gate-card h2,
@@ -313,6 +313,7 @@ main,
 
 .gate-card h2 {
   font-size: clamp(4rem, 15vw, 7.4rem);
+  color: #f3e7d4;
 }
 
 .gate-couple,
@@ -340,7 +341,7 @@ main,
   line-height: 1.2;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--rose-deep);
+  color: rgba(240, 224, 202, 0.74);
 }
 
 .gate-body,
@@ -359,6 +360,7 @@ main,
   max-width: none;
   line-height: 1.45;
   font-size: 1rem;
+  color: rgba(240, 224, 202, 0.82);
 }
 
 .gate-language {
@@ -378,10 +380,10 @@ main,
   border-radius: 50%;
   cursor: pointer;
   background:
-    radial-gradient(circle at 30% 28%, #cd7a85 0%, #b65a69 40%, #923a4d 100%);
+    radial-gradient(circle at 30% 28%, #ebcf9f 0%, #d7b27b 36%, #a46e39 100%);
   box-shadow:
-    inset 0 2px 8px rgba(255, 255, 255, 0.24),
-    0 16px 34px rgba(146, 58, 77, 0.28);
+    inset 0 2px 8px rgba(255, 255, 255, 0.28),
+    0 18px 34px rgba(0, 0, 0, 0.32);
   transition:
     transform 220ms ease,
     box-shadow 220ms ease;
@@ -413,7 +415,7 @@ main,
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
-  color: #fff7f0;
+  color: #2f1a16;
 }
 
 .gate-seal-core strong {
@@ -433,7 +435,7 @@ main,
 .gate-hint {
   margin: 1rem 0 0;
   font-size: 0.84rem;
-  color: rgba(113, 92, 83, 0.8);
+  color: rgba(240, 224, 202, 0.56);
 }
 
 .invitation-gate.is-opening .gate-card,
@@ -448,7 +450,7 @@ main,
   position: absolute;
   inset: 10% 12%;
   border-radius: 50%;
-  border: 1px solid rgba(146, 58, 77, 0.12);
+  border: 1px solid rgba(240, 224, 202, 0.08);
   pointer-events: none;
   animation: orbitFloat 7s ease-in-out infinite alternate;
 }
@@ -567,7 +569,7 @@ main {
 
 .hero-card {
   width: 100%;
-  padding: 1.45rem;
+  padding: 1.2rem;
   border-radius: var(--radius-xl);
   background:
     linear-gradient(180deg, rgba(255, 250, 243, 0.92), rgba(247, 238, 225, 0.84)),
@@ -578,11 +580,27 @@ main {
   overflow: hidden;
 }
 
+.hero-layout {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.hero-copy-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-visual-column {
+  display: grid;
+  gap: 0.7rem;
+}
+
 .hero-visual {
-  margin: -0.25rem -0.25rem 1.2rem;
   border-radius: 22px;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
+  box-shadow: 0 24px 42px rgba(62, 39, 28, 0.16);
 }
 
 .hero-visual img,
@@ -621,7 +639,7 @@ main {
 }
 
 .hero h1 {
-  font-size: clamp(4rem, 16vw, 8.6rem);
+  font-size: clamp(4.4rem, 15vw, 8.8rem);
   color: #3a231f;
 }
 
@@ -637,24 +655,33 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.42rem;
-  margin: 1.2rem 0 1rem;
+  margin: 1.35rem 0 1rem;
   color: var(--muted);
+  font-size: 0.98rem;
 }
 
 .hero-title {
   margin: 0;
-  max-width: 14ch;
-  font-size: clamp(1rem, 2.8vw, 1.2rem);
-  line-height: 1.2;
+  max-width: 12ch;
+  font-size: clamp(1.65rem, 4vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: #3a231f;
+}
+
+.hero-caption {
+  margin: 0;
+  font-size: 0.82rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--rose-deep);
 }
 
 .hero-signature {
-  margin: 0.65rem 0 0;
+  margin: 0.85rem 0 0;
   max-width: 28rem;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .hero-actions {
@@ -1005,6 +1032,16 @@ main {
     padding: 2rem;
   }
 
+  .hero-layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .hero-visual {
+    min-height: 580px;
+  }
+
   .hero-actions {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1080,6 +1117,11 @@ main {
   }
 
   .hero-card {
-    padding: 2.4rem;
+    padding: 2.2rem;
+  }
+
+  .hero-layout {
+    grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
+    gap: 2.6rem;
   }
 }

@@ -185,31 +185,40 @@ export default function App() {
           <main id="home">
             <section className="hero section">
               <div className="hero-card">
-                <div className="hero-visual reveal">
-                  <img
-                    src={assetUrl(weddingContent.images.hero)}
-                    alt={language === 'fr' ? 'Ramzi et Sana' : 'Ramzi and Sana'}
-                  />
-                </div>
-                <p className="hero-eyebrow reveal">{t(weddingContent.hero.eyebrow)}</p>
-                <h1 className="reveal hero-couple" aria-label={weddingContent.couple}>
-                  <span>{weddingContent.names.first}</span>
-                  <span className="hero-ampersand">&amp;</span>
-                  <span>{weddingContent.names.second}</span>
-                </h1>
-                <p className="hero-meta reveal">
-                  <span>{weddingContent.hero.location[language]}</span>
-                  <span>{weddingContent.hero.access[language]}</span>
-                </p>
-                <p className="hero-title reveal">{t(weddingContent.hero.title)}</p>
-                {heroSignature ? <p className="hero-signature reveal">{heroSignature}</p> : null}
-                <div className="hero-actions reveal">
-                  <a className="button button-primary" href={weddingContent.rsvpLink} target="_blank" rel="noreferrer">
-                    {t(weddingContent.hero.primaryCta)}
-                  </a>
-                  <button type="button" className="button button-secondary" onClick={scrollToProgramme}>
-                    {t(weddingContent.hero.secondaryCta)}
-                  </button>
+                <div className="hero-layout">
+                  <div className="hero-copy-column">
+                    <p className="hero-eyebrow reveal">{t(weddingContent.hero.eyebrow)}</p>
+                    <h1 className="reveal hero-couple" aria-label={weddingContent.couple}>
+                      <span>{weddingContent.names.first}</span>
+                      <span className="hero-ampersand">&amp;</span>
+                      <span>{weddingContent.names.second}</span>
+                    </h1>
+                    <p className="hero-meta reveal">
+                      <span>{weddingContent.hero.location[language]}</span>
+                      <span>{weddingContent.hero.access[language]}</span>
+                    </p>
+                    <p className="hero-title reveal">{t(weddingContent.hero.title)}</p>
+                    {heroSignature ? <p className="hero-signature reveal">{heroSignature}</p> : null}
+                    <div className="hero-actions reveal">
+                      <a className="button button-primary" href={weddingContent.rsvpLink} target="_blank" rel="noreferrer">
+                        {t(weddingContent.hero.primaryCta)}
+                      </a>
+                      <button type="button" className="button button-secondary" onClick={scrollToProgramme}>
+                        {t(weddingContent.hero.secondaryCta)}
+                      </button>
+                    </div>
+                  </div>
+                  <div className="hero-visual-column">
+                    <div className="hero-visual reveal">
+                      <img
+                        src={assetUrl(weddingContent.images.hero)}
+                        alt={language === 'fr' ? 'Ramzi et Sana' : 'Ramzi and Sana'}
+                      />
+                    </div>
+                    <p className="hero-caption reveal">
+                      {language === 'fr' ? 'Châteaufort, 12 septembre 2026' : 'Châteaufort, September 12, 2026'}
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>
