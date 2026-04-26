@@ -169,6 +169,12 @@ export default function App() {
           <main id="home">
             <section className="hero section">
               <div className="hero-card">
+                <div className="hero-visual reveal">
+                  <img
+                    src={weddingContent.images.hero}
+                    alt={language === 'fr' ? 'Ramzi et Sana' : 'Ramzi and Sana'}
+                  />
+                </div>
                 <p className="hero-eyebrow reveal">{t(weddingContent.hero.eyebrow)}</p>
                 <h1 className="reveal hero-couple" aria-label={weddingContent.couple}>
                   <span>{weddingContent.names.first}</span>
@@ -241,9 +247,11 @@ export default function App() {
                   </a>
                 </div>
                 <figure className="image-placeholder reveal" aria-label={t(weddingContent.venueSection.imageCaption)}>
-                  <div className="image-frame">
-                    <span>01</span>
-                    <p>{t(weddingContent.ui.venuePlaceholder)}</p>
+                  <div className="image-frame image-frame-photo">
+                    <img
+                      src={weddingContent.images.venue}
+                      alt={language === 'fr' ? 'Le Domaine de la Geneste' : 'Domaine de la Geneste'}
+                    />
                   </div>
                   <figcaption>{t(weddingContent.venueSection.imageCaption)}</figcaption>
                 </figure>
@@ -310,8 +318,8 @@ export default function App() {
               <div className="gallery-grid">
                 {weddingContent.gallery.items.map((item, index) => (
                   <figure className="gallery-card reveal" key={item.title.en}>
-                    <div className="gallery-placeholder">
-                      <span>{`0${index + 1}`}</span>
+                    <div className="gallery-placeholder gallery-photo">
+                      <img src={item.image} alt={item.alt[language]} />
                     </div>
                     <figcaption>
                       <strong>{item.title[language]}</strong>

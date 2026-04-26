@@ -20,6 +20,8 @@ export type FaqItem = {
 export type GalleryItem = {
   title: LocalizedText;
   caption: LocalizedText;
+  image: string;
+  alt: LocalizedText;
 };
 
 export const weddingContent = {
@@ -75,6 +77,10 @@ export const weddingContent = {
       en: 'Venue photo goes here',
     },
     floatingRsvp: { fr: 'RSVP', en: 'RSVP' },
+  },
+  images: {
+    hero: '/pics/AD037E47-D4D3-4640-879B-01A821A13B0A.jpeg',
+    venue: '/pics/domaine.jpg',
   },
   intro: {
     overline: {
@@ -215,8 +221,8 @@ export const weddingContent = {
       en: 'Open in Google Maps',
     },
     imageCaption: {
-      fr: 'Placeholder photo du domaine — à remplacer plus tard.',
-      en: 'Venue photo placeholder — to be replaced later.',
+      fr: 'Le domaine, à Châteaufort.',
+      en: 'The estate in Châteaufort.',
     },
   },
   dressCode: {
@@ -380,15 +386,30 @@ export const weddingContent = {
     items: [
       {
         title: { fr: 'Le domaine', en: 'The estate' },
-        caption: { fr: 'Placeholder du lieu', en: 'Venue placeholder' },
+        caption: { fr: 'Le lieu', en: 'The venue' },
+        image: '/pics/domaine.jpg',
+        alt: {
+          fr: 'Le Domaine de la Geneste à Châteaufort',
+          en: 'Domaine de la Geneste in Châteaufort',
+        },
       },
       {
         title: { fr: 'Nous', en: 'Us' },
-        caption: { fr: 'Placeholder portrait', en: 'Portrait placeholder' },
+        caption: { fr: 'Portrait', en: 'Portrait' },
+        image: '/pics/44FAACDF-8F67-4297-8215-C6384873A08C_1_105_c.jpeg',
+        alt: {
+          fr: 'Ramzi et Sana',
+          en: 'Ramzi and Sana',
+        },
       },
       {
         title: { fr: 'La nuit', en: 'The night' },
-        caption: { fr: 'Placeholder ambiance', en: 'Mood placeholder' },
+        caption: { fr: 'Ambiance', en: 'Mood' },
+        image: '/pics/83A3EA6C-1B04-47F1-83F0-2DA0C8C61CE0_4_5005_c.jpeg',
+        alt: {
+          fr: 'Ambiance de la soirée',
+          en: 'Evening atmosphere',
+        },
       },
     ] as GalleryItem[],
   },
