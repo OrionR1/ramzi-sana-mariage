@@ -11,6 +11,10 @@ function formatGoogleCalendarDate(isoDate: string) {
   return new Date(isoDate).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
 }
 
+function assetUrl(path: string) {
+  return `${import.meta.env.BASE_URL}${path}`;
+}
+
 function buildCalendarLinks() {
   const start = weddingContent.date.iso;
   const end = weddingContent.calendar.endIso;
@@ -171,7 +175,7 @@ export default function App() {
               <div className="hero-card">
                 <div className="hero-visual reveal">
                   <img
-                    src={weddingContent.images.hero}
+                    src={assetUrl(weddingContent.images.hero)}
                     alt={language === 'fr' ? 'Ramzi et Sana' : 'Ramzi and Sana'}
                   />
                 </div>
@@ -249,7 +253,7 @@ export default function App() {
                 <figure className="image-placeholder reveal" aria-label={t(weddingContent.venueSection.imageCaption)}>
                   <div className="image-frame image-frame-photo">
                     <img
-                      src={weddingContent.images.venue}
+                      src={assetUrl(weddingContent.images.venue)}
                       alt={language === 'fr' ? 'Le Domaine de la Geneste' : 'Domaine de la Geneste'}
                     />
                   </div>
@@ -319,7 +323,7 @@ export default function App() {
                 {weddingContent.gallery.items.map((item, index) => (
                   <figure className="gallery-card reveal" key={item.title.en}>
                     <div className="gallery-placeholder gallery-photo">
-                      <img src={item.image} alt={item.alt[language]} />
+                      <img src={assetUrl(item.image)} alt={item.alt[language]} />
                     </div>
                     <figcaption>
                       <strong>{item.title[language]}</strong>
