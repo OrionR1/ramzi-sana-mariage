@@ -88,6 +88,9 @@ export default function App() {
   const t = (value: Record<Language, string>) => value[language];
   const rsvpDeadline = weddingContent.rsvpDeadline[language];
   const introBody = t(weddingContent.intro.body);
+  const heroLocation = t(weddingContent.hero.location);
+  const heroAccess = t(weddingContent.hero.access);
+  const heroTitle = t(weddingContent.hero.title);
   const heroSignature = t(weddingContent.hero.signature);
   const invitationLead = t(weddingContent.invitation.lead);
   const rsvpBody = t(weddingContent.rsvp.body)
@@ -193,11 +196,13 @@ export default function App() {
                       <span className="hero-ampersand">&amp;</span>
                       <span>{weddingContent.names.second}</span>
                     </h1>
-                    <p className="hero-meta reveal">
-                      <span>{weddingContent.hero.location[language]}</span>
-                      <span>{weddingContent.hero.access[language]}</span>
-                    </p>
-                    <p className="hero-title reveal">{t(weddingContent.hero.title)}</p>
+                    {heroLocation || heroAccess ? (
+                      <p className="hero-meta reveal">
+                        {heroLocation ? <span>{heroLocation}</span> : null}
+                        {heroAccess ? <span>{heroAccess}</span> : null}
+                      </p>
+                    ) : null}
+                    {heroTitle ? <p className="hero-title reveal">{heroTitle}</p> : null}
                     {heroSignature ? <p className="hero-signature reveal">{heroSignature}</p> : null}
                     <div className="hero-actions reveal">
                       <a className="button button-primary" href={weddingContent.rsvpLink} target="_blank" rel="noreferrer">
