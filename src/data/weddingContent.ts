@@ -45,6 +45,10 @@ export const weddingContent = {
     fr: 'Domaine de la Geneste — Châteaufort',
     en: 'Domaine de la Geneste — Châteaufort',
   },
+  venueDisplay: {
+    fr: 'Domaine de la Geneste — 78117 Châteaufort',
+    en: 'Domaine de la Geneste — 78117 Châteaufort',
+  },
   address: 'Chemin de la Geneste, 78117 Châteaufort, France',
   mapsLink:
     'https://www.google.com/maps/search/?api=1&query=Chemin%20de%20la%20Geneste%2C%2078117%20Ch%C3%A2teaufort%2C%20France',
@@ -99,9 +103,17 @@ export const weddingContent = {
       fr: 'Invitation privée',
       en: 'Private invitation',
     },
+    location: {
+      fr: 'Domaine de la Geneste — 78117 Châteaufort',
+      en: 'Domaine de la Geneste — 78117 Châteaufort',
+    },
+    access: {
+      fr: 'À 30 minutes de Paris en voiture · RER B puis taxi/VTC',
+      en: '30 minutes from Paris by car · RER B then taxi/rideshare',
+    },
     title: {
-      fr: '12 septembre 2026',
-      en: 'September 12, 2026',
+      fr: 'Cérémonie, cocktail dînatoire et fête',
+      en: 'Ceremony, cocktail buffet and celebration',
     },
     primaryCta: {
       fr: "Répondre à l'invitation",
@@ -112,8 +124,8 @@ export const weddingContent = {
       en: 'See the details',
     },
     signature: {
-      fr: 'Domaine de la Geneste, Châteaufort',
-      en: 'Domaine de la Geneste, Châteaufort',
+      fr: 'Le 12 septembre 2026, à partir de 17h',
+      en: 'September 12, 2026, from 5 PM',
     },
   },
   countdown: {

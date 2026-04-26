@@ -177,7 +177,8 @@ export default function App() {
                 </h1>
                 <p className="hero-meta reveal">
                   <span>{weddingContent.date.display[language]}</span>
-                  <span>{weddingContent.venueShort[language]}</span>
+                  <span>{weddingContent.hero.location[language]}</span>
+                  <span>{weddingContent.hero.access[language]}</span>
                 </p>
                 <p className="hero-title reveal">{t(weddingContent.hero.title)}</p>
                 <p className="hero-signature reveal">{t(weddingContent.hero.signature)}</p>
