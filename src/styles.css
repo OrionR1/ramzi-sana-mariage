@@ -304,6 +304,10 @@ main,
   color: rgba(94, 72, 59, 0.78);
 }
 
+.hero-eyebrow {
+  color: rgba(111, 75, 61, 0.96);
+}
+
 .gate-card h2,
 .hero h1,
 .section-heading h2 {
