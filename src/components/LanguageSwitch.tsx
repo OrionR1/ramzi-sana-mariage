@@ -15,16 +15,24 @@ export function LanguageSwitch({ language, onChange, label = 'Language' }: Langu
         className={language === 'fr' ? 'is-active' : ''}
         onClick={() => onChange('fr')}
         aria-pressed={language === 'fr'}
+        aria-label="Français"
+        title="Français"
       >
-        FR
+        <span aria-hidden="true" className="language-flag">
+          🇫🇷
+        </span>
       </button>
       <button
         type="button"
         className={language === 'en' ? 'is-active' : ''}
         onClick={() => onChange('en')}
         aria-pressed={language === 'en'}
+        aria-label="English"
+        title="English"
       >
-        EN
+        <span aria-hidden="true" className="language-flag">
+          🇬🇧
+        </span>
       </button>
     </div>
   );
