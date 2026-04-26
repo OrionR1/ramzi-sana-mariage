@@ -54,7 +54,7 @@ export const weddingContent = {
   address: 'Chemin de la Geneste, 78117 Châteaufort, France',
   mapsLink:
     'https://www.google.com/maps/search/?api=1&query=Chemin%20de%20la%20Geneste%2C%2078117%20Ch%C3%A2teaufort%2C%20France',
-  rsvpLink: '[REMPLACER_PAR_LIEN_GOOGLE_FORM]',
+  rsvpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdi2tlFE4cRWuOifaA_FT9PEC_5zWp4xzG-3ASeuYFXwMMCuA/viewform?usp=publish-editor',
   rsvpEmail: '[REMPLACER_PAR_EMAIL]',
   rsvpDeadline: {
     fr: '15 juin 2026',
