@@ -87,6 +87,12 @@ export default function App() {
 
   const t = (value: Record<Language, string>) => value[language];
   const rsvpDeadline = weddingContent.rsvpDeadline[language];
+  const introBody = t(weddingContent.intro.body);
+  const heroSignature = t(weddingContent.hero.signature);
+  const invitationLead = t(weddingContent.invitation.lead);
+  const rsvpBody = t(weddingContent.rsvp.body)
+    .replace('[date limite]', rsvpDeadline)
+    .replace('[deadline]', rsvpDeadline);
 
   const scrollToProgramme = () => {
     document.getElementById(sectionIds.programme)?.scrollIntoView({ behavior: 'smooth' });
@@ -135,7 +141,7 @@ export default function App() {
             </h2>
             <div className="gate-copy">
               <p className="gate-title">{t(weddingContent.intro.title)}</p>
-              <p className="gate-body">{t(weddingContent.intro.body)}</p>
+              {introBody ? <p className="gate-body">{introBody}</p> : null}
             </div>
             <div className="gate-language">
               <LanguageSwitch
@@ -192,12 +198,11 @@ export default function App() {
                   <span>{weddingContent.names.second}</span>
                 </h1>
                 <p className="hero-meta reveal">
-                  <span>{weddingContent.date.display[language]}</span>
                   <span>{weddingContent.hero.location[language]}</span>
                   <span>{weddingContent.hero.access[language]}</span>
                 </p>
                 <p className="hero-title reveal">{t(weddingContent.hero.title)}</p>
-                <p className="hero-signature reveal">{t(weddingContent.hero.signature)}</p>
+                {heroSignature ? <p className="hero-signature reveal">{heroSignature}</p> : null}
                 <div className="hero-actions reveal">
                   <a className="button button-primary" href={weddingContent.rsvpLink} target="_blank" rel="noreferrer">
                     {t(weddingContent.hero.primaryCta)}
@@ -222,13 +227,14 @@ export default function App() {
             <section className="section invitation-section">
               <SectionTitle title={t(weddingContent.invitation.title)} />
               <div className="prose-panel reveal">
-                <p className="lead-text">{t(weddingContent.invitation.lead)}</p>
+                {invitationLead ? <p className="lead-text">{invitationLead}</p> : null}
                 <p>{t(weddingContent.invitation.body)}</p>
               </div>
             </section>
 
             <section className="section" id={sectionIds.programme}>
               <SectionTitle title={t(weddingContent.programme.title)} />
+              <p className="section-note reveal">{t(weddingContent.programme.intro)}</p>
               <Timeline items={weddingContent.programme.timeline} language={language} />
               <p className="section-note reveal">{t(weddingContent.programme.note)}</p>
             </section>
@@ -278,11 +284,7 @@ export default function App() {
             <section className="section rsvp-section" id={sectionIds.rsvp}>
               <SectionTitle title={t(weddingContent.rsvp.title)} />
               <div className="rsvp-panel reveal">
-                <p>
-                  {language === 'fr'
-                    ? `Merci de nous répondre avant le ${rsvpDeadline}.`
-                    : `Please reply before ${rsvpDeadline}.`}
-                </p>
+                <p>{rsvpBody}</p>
                 <div className="hero-actions">
                   <a className="button button-primary" href={weddingContent.rsvpLink} target="_blank" rel="noreferrer">
                     {t(weddingContent.rsvp.primaryCta)}
@@ -295,10 +297,12 @@ export default function App() {
                     {t(weddingContent.rsvp.calendarCta)}
                   </a>
                 </div>
-                <p className="rsvp-help">
-                  {t(weddingContent.rsvp.help)}{' '}
-                  <a href={`mailto:${weddingContent.rsvpEmail}`}>{weddingContent.rsvpEmail}</a>
-                </p>
+                <p className="rsvp-help">{t(weddingContent.rsvp.help)}</p>
+                {weddingContent.rsvpEmail !== '[REMPLACER_PAR_EMAIL]' ? (
+                  <p className="rsvp-help">
+                    <a href={`mailto:${weddingContent.rsvpEmail}`}>{weddingContent.rsvpEmail}</a>
+                  </p>
+                ) : null}
                 <a className="text-link" href={calendarLinks.googleLink} target="_blank" rel="noreferrer">
                   {t(weddingContent.rsvp.googleCalendarCta)}
                 </a>

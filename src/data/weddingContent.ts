@@ -84,16 +84,16 @@ export const weddingContent = {
   },
   intro: {
     overline: {
-      fr: 'Invitation privée',
-      en: 'Sealed invitation',
+      fr: 'Ramzi & Sana',
+      en: 'Ramzi & Sana',
     },
     title: {
       fr: '12 septembre 2026',
-      en: 'September 12, 2026',
+      en: '12 September 2026',
     },
     body: {
-      fr: 'Domaine de la Geneste, Châteaufort',
-      en: 'Domaine de la Geneste, Châteaufort',
+      fr: '',
+      en: '',
     },
     cta: {
       fr: 'Entrer',
@@ -106,20 +106,20 @@ export const weddingContent = {
   },
   hero: {
     eyebrow: {
-      fr: 'Invitation privée',
-      en: 'Private invitation',
+      fr: 'Mariage',
+      en: 'Wedding',
     },
     location: {
-      fr: 'Domaine de la Geneste — 78117 Châteaufort',
-      en: 'Domaine de la Geneste — 78117 Châteaufort',
+      fr: 'Le samedi 12 septembre 2026, au Domaine de la Geneste.',
+      en: 'Saturday, 12 September 2026, at Domaine de la Geneste.',
     },
     access: {
       fr: 'À 30 minutes de Paris en voiture · RER B puis taxi/VTC',
       en: '30 minutes from Paris by car · RER B then taxi/rideshare',
     },
     title: {
-      fr: 'Cérémonie, cocktail dînatoire et fête',
-      en: 'Ceremony, cocktail buffet and celebration',
+      fr: 'Ramzi & Sana',
+      en: 'Ramzi & Sana',
     },
     primaryCta: {
       fr: "Répondre à l'invitation",
@@ -130,8 +130,8 @@ export const weddingContent = {
       en: 'See the details',
     },
     signature: {
-      fr: 'Le 12 septembre 2026, à partir de 17h',
-      en: 'September 12, 2026, from 5 PM',
+      fr: '',
+      en: '',
     },
   },
   countdown: {
@@ -156,14 +156,14 @@ export const weddingContent = {
       en: 'Our invitation',
     },
     lead: {
-      fr: 'Nous serions heureux de vous retrouver pour célébrer notre mariage.',
-      en: 'We would be delighted to celebrate our wedding with you.',
+      fr: '',
+      en: '',
     },
     body: {
       fr:
-        "Le 12 septembre 2026, nous vous donnons rendez-vous au Domaine de la Geneste, à Châteaufort, pour célébrer notre mariage. À partir de 17h, nous nous retrouverons pour une cérémonie, un cocktail dînatoire, de la musique, de la danse et une très belle soirée à partager avec vous.",
+        'Nous serions très heureux de vous recevoir pour célébrer notre mariage au Domaine de la Geneste, à Châteaufort. La cérémonie sera suivie d’un cocktail dînatoire, de musique, de danse, et d’une soirée pensée pour profiter pleinement de ceux qui nous sont chers.',
       en:
-        'On September 12th, 2026, we invite you to join us at Domaine de la Geneste in Châteaufort to celebrate our wedding. From 5 PM, we will gather for a ceremony, a cocktail buffet, music, dancing and a beautiful evening shared with you.',
+        'We would be delighted to welcome you to celebrate our wedding at Domaine de la Geneste, in Châteaufort. The ceremony will be followed by a cocktail-style dinner, music, dancing, and an evening designed to be shared with the people closest to us.',
     },
   },
   programme: {
@@ -171,9 +171,13 @@ export const weddingContent = {
       fr: 'Le programme',
       en: 'The programme',
     },
+    intro: {
+      fr: 'Rendez-vous à partir de 17h00.',
+      en: 'Please join us from 5:00 PM.',
+    },
     note: {
-      fr: "Il ne s'agira pas d'un dîner assis traditionnel : l'esprit sera plus libre, plus vivant et plus festif.",
-      en: 'This will not be a traditional seated dinner: the evening is designed to feel freer, more alive, and more festive.',
+      fr: 'Après la cérémonie, la soirée se poursuivra autour d’un cocktail dînatoire et d’un buffet, dans un format libre, élégant et convivial — sans dîner assis traditionnel.',
+      en: 'After the ceremony, the evening will continue with a cocktail-style dinner and buffet — a relaxed, elegant format rather than a traditional seated dinner.',
     },
     timeline: [
       {
@@ -212,9 +216,9 @@ export const weddingContent = {
     },
     body: {
       fr:
-        "Un domaine caché dans la Vallée de Chevreuse, avec son château, son parc, ses gîtes et cette impression rare d'être à la fois tout près de Paris et déjà ailleurs.",
+        'À seulement trente minutes de Paris en voiture, le Domaine de la Geneste nous accueille dans un cadre privé, calme et élégant. Un lieu à part, entouré de verdure, pour célébrer cette journée avec simplicité et caractère.',
       en:
-        'A hidden estate in the Chevreuse Valley, with its chateau, gardens, guest houses and that rare feeling of being both close to Paris and already somewhere else.',
+        'Around thirty minutes from Paris by car, Domaine de la Geneste offers a private and elegant setting surrounded by greenery. A beautiful place to gather, celebrate, and spend the evening together.',
     },
     mapCta: {
       fr: 'Ouvrir dans Google Maps',
@@ -232,9 +236,9 @@ export const weddingContent = {
     },
     body: {
       fr:
-        "Pas de thème imposé. Venez élégants, venez vous-mêmes. Chic, audacieux, confortable pour danser — l'essentiel est que vous vous sentiez bien.",
+        'Aucun dress code imposé. Venez chic, élégant, fidèle à vous-même — et suffisamment à l’aise pour danser.',
       en:
-        'No strict dress code. Come beautiful, come as yourself. Elegant, chic, bold, comfortable enough to dance — the only rule is to feel good.',
+        'There is no strict dress code. Come chic, elegant, and true to yourself — with something you can dance in.',
     },
   },
   rsvp: {
@@ -243,12 +247,12 @@ export const weddingContent = {
       en: 'RSVP',
     },
     body: {
-      fr: 'Merci de nous répondre avant le 15 juin 2026.',
-      en: 'Please reply before June 15, 2026.',
+      fr: 'Merci de nous confirmer votre présence avant le 15 juin 2026.',
+      en: 'Please confirm your attendance by June 15, 2026.',
     },
     help: {
-      fr: 'Si besoin, vous pouvez aussi nous écrire à',
-      en: 'If needed, you can also reach us at',
+      fr: 'Le formulaire de réponse sera disponible prochainement.',
+      en: 'The RSVP form will be available soon.',
     },
     primaryCta: {
       fr: "Répondre à l'invitation",
@@ -272,36 +276,36 @@ export const weddingContent = {
       {
         title: { fr: 'Depuis Paris', en: 'From Paris' },
         body: {
-          fr: 'Le domaine se situe à Châteaufort, dans les Yvelines, à environ 30 minutes de Paris selon le trafic.',
+          fr: 'Le Domaine de la Geneste se trouve à Châteaufort, à environ trente minutes de Paris en voiture.',
           en: 'The estate is in Châteaufort, in the Yvelines area, around 30 minutes from Paris depending on traffic.',
         },
       },
       {
         title: { fr: 'Train / RER', en: 'Train / RER' },
         body: {
-          fr: 'La gare RER la plus pratique sera à confirmer. Prévoir taxi ou VTC depuis la gare.',
-          en: 'The most convenient RER station will be confirmed. Plan for a taxi or ride-share from the station.',
+          fr: 'Accès possible en RER B, puis taxi ou VTC jusqu’au domaine.',
+          en: 'The venue can be reached via RER B, followed by a taxi or private ride.',
         },
       },
       {
         title: { fr: 'Voiture', en: 'By car' },
         body: {
-          fr: 'Parking disponible à proximité ou sur place — à confirmer avec le domaine.',
-          en: 'Parking should be available nearby or on site — to be confirmed with the venue.',
+          fr: 'Adresse : Chemin de la Geneste, 78117 Châteaufort, France. Un itinéraire précis sera partagé avant l’événement.',
+          en: 'Address: Chemin de la Geneste, 78117 Châteaufort, France. Detailed directions will be shared before the event.',
         },
       },
       {
         title: { fr: 'Hébergement', en: 'Staying nearby' },
         body: {
-          fr: "Quelques hébergements existent sur place ou à proximité. Nous partagerons une liste d'options plus tard.",
-          en: 'A few accommodation options exist on site or nearby. We will share a list later on.',
+          fr: 'Quelques options d’hébergement à proximité seront proposées prochainement.',
+          en: 'A selection of nearby accommodation options will be shared soon.',
         },
       },
       {
         title: { fr: 'Retour', en: 'Getting back' },
         body: {
-          fr: 'Pensez à anticiper taxi, VTC ou covoiturage pour le retour.',
-          en: 'Please plan ahead for taxis, ride-shares or carpooling for the way back.',
+          fr: 'Nous vous conseillons d’anticiper votre retour en taxi ou VTC, surtout en fin de soirée.',
+          en: 'We recommend arranging a taxi or private ride in advance, especially for the end of the evening.',
         },
       },
     ] as InfoCard[],
@@ -328,8 +332,8 @@ export const weddingContent = {
           en: 'Are children invited?',
         },
         answer: {
-          fr: 'Nous préciserons cela individuellement selon les invitations.',
-          en: 'We will clarify this individually depending on each invitation.',
+          fr: 'Sauf mention contraire, la soirée est pensée comme un moment entre adultes.',
+          en: 'Unless stated otherwise, the evening is planned as an adults-only celebration.',
         },
       },
       {
@@ -338,8 +342,8 @@ export const weddingContent = {
           en: 'What time should we arrive?',
         },
         answer: {
-          fr: 'Idéalement entre 16h30 et 16h50 pour commencer à 17h.',
-          en: 'Ideally between 4:30 PM and 4:50 PM so we can begin at 5 PM.',
+          fr: 'Nous vous attendons à partir de 17h00. Merci d’arriver quelques minutes avant le début de la cérémonie.',
+          en: 'We look forward to welcoming you from 5:00 PM. Please arrive a few minutes before the ceremony begins.',
         },
       },
       {
@@ -348,8 +352,8 @@ export const weddingContent = {
           en: 'Will there be a seated dinner?',
         },
         answer: {
-          fr: 'Non, nous prévoyons plutôt un cocktail dînatoire / buffet, plus libre et convivial.',
-          en: 'No, we are planning a cocktail buffet instead, with a freer and more convivial flow.',
+          fr: 'Non. La soirée se déroulera autour d’un cocktail dînatoire et d’un buffet, dans un format plus libre.',
+          en: 'No. The evening will be built around a cocktail-style dinner and buffet, in a more fluid format.',
         },
       },
       {
@@ -358,8 +362,8 @@ export const weddingContent = {
           en: 'Where should we stay?',
         },
         answer: {
-          fr: 'Nous partagerons bientôt quelques recommandations.',
-          en: 'We will share a few recommendations soon.',
+          fr: 'Des recommandations d’hébergement proches du domaine seront partagées prochainement.',
+          en: 'Recommendations for nearby accommodation will be shared soon.',
         },
       },
       {
@@ -368,20 +372,20 @@ export const weddingContent = {
           en: 'Is there a dress code?',
         },
         answer: {
-          fr: 'Pas de dress code strict : élégant, chic, vous-mêmes.',
-          en: 'No strict dress code: elegant, chic, and entirely yourselves.',
+          fr: 'Pas de dress code strict. Une tenue chic et élégante sera parfaite.',
+          en: 'There is no strict dress code. Chic and elegant will be perfect.',
         },
       },
     ] as FaqItem[],
   },
   gallery: {
     title: {
-      fr: 'À venir',
-      en: 'Coming soon',
+      fr: 'Quelques images',
+      en: 'A few images',
     },
     intro: {
-      fr: 'Quelques images viendront bientôt habiter cette invitation.',
-      en: 'A few images will soon find their way into this invitation.',
+      fr: 'Un aperçu du lieu, de l’atmosphère, et de ce qui nous attend.',
+      en: 'A glimpse of the place, the atmosphere, and what awaits.',
     },
     items: [
       {
@@ -424,8 +428,8 @@ export const weddingContent = {
   footer: {
     signature: 'Ramzi & Sana — 12.09.2026',
     line: {
-      fr: 'Ramzi & Sana vous attendent au Domaine de la Geneste.',
-      en: 'Ramzi & Sana are looking forward to welcoming you at Domaine de la Geneste.',
+      fr: 'Avec vous, ce sera encore plus beau.',
+      en: 'It will mean even more with you there.',
     },
   },
 } as const;
