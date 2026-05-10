@@ -295,13 +295,6 @@ export const weddingContent = {
         },
       },
       {
-        title: { fr: 'Hébergement', en: 'Accommodation' },
-        body: {
-          fr: 'Quelques options d’hébergement à proximité seront proposées prochainement.',
-          en: 'A selection of nearby accommodation options will be shared soon.',
-        },
-      },
-      {
         title: { fr: 'Retour', en: 'Return' },
         body: {
           fr: 'Nous vous conseillons d’anticiper votre retour en taxi ou VTC, surtout en fin de soirée.',
