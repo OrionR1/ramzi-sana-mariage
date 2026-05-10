@@ -283,15 +283,15 @@ export const weddingContent = {
       {
         title: { fr: 'Train / RER', en: 'Train / RER' },
         body: {
-          fr: 'Accès possible en RER B, puis bus, taxi ou VTC jusqu’au domaine. Sinon, en voiture, comptez environ 30 minutes depuis Paris.',
-          en: 'The venue can be reached via RER B, followed by a bus, taxi, or private ride. Otherwise, it is about a 30-minute drive from Paris.',
+          fr: 'Accès possible en RER B, puis bus, taxi ou VTC jusqu’au domaine.',
+          en: 'The venue can be reached via RER B, followed by a bus, taxi, or private ride.',
         },
       },
       {
-        title: { fr: 'Voiture', en: 'Car' },
+        title: { fr: 'Adresse', en: 'Address' },
         body: {
-          fr: 'Adresse : Chemin de la Geneste, 78117 Châteaufort, France. Un itinéraire précis sera partagé avant l’événement.',
-          en: 'Address: Chemin de la Geneste, 78117 Châteaufort, France. Detailed directions will be shared before the event.',
+          fr: 'Chemin de la Geneste, 78117 Châteaufort, France.',
+          en: 'Chemin de la Geneste, 78117 Châteaufort, France.',
         },
       },
       {
