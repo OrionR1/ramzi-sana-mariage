@@ -110,12 +110,12 @@ export const weddingContent = {
       en: 'Wedding',
     },
     location: {
-      fr: '12 septembre 2026 — Domaine de la Geneste',
-      en: '12 September 2026 — Domaine de la Geneste',
+      fr: '12 septembre 2026',
+      en: '12 September 2026',
     },
     access: {
-      fr: '',
-      en: '',
+      fr: '14h00 — Mairie de Neuilly-sur-Seine · 17h00 — Domaine de la Geneste',
+      en: '2:00 PM — Neuilly-sur-Seine town hall · 5:00 PM — Domaine de la Geneste',
     },
     title: {
       fr: '',
@@ -161,9 +161,9 @@ export const weddingContent = {
     },
     body: {
       fr:
-        'Nous serions très heureux de vous recevoir au Domaine de la Geneste, à Châteaufort 78117, pour célébrer notre mariage. Après la cérémonie, la soirée se poursuivra autour d’un cocktail dînatoire, de musique et de danse — simplement, avec les personnes qui comptent pour nous.',
+        'Nous serions très heureux de vous retrouver à 14h00 à la mairie de Neuilly-sur-Seine, puis à 17h00 au Domaine de la Geneste, à Châteaufort 78117, pour célébrer notre mariage. La soirée se poursuivra autour d’un cocktail dînatoire, de musique et de danse — simplement, avec les personnes qui comptent pour nous.',
       en:
-        'We would be delighted to welcome you to Domaine de la Geneste, in Châteaufort 78117, to celebrate our wedding. After the ceremony, the evening will continue with a cocktail-style dinner, music and dancing — simply, with the people who matter most to us.',
+        'We would be delighted to welcome you at 2:00 PM to Neuilly-sur-Seine town hall, then at 5:00 PM to Domaine de la Geneste in Châteaufort 78117, to celebrate our wedding. The evening will continue with a cocktail-style dinner, music and dancing — simply, with the people who matter most to us.',
     },
   },
   programme: {
