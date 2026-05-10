@@ -283,8 +283,8 @@ export const weddingContent = {
       {
         title: { fr: 'Train / RER', en: 'Train / RER' },
         body: {
-          fr: 'Accès possible en RER B, puis taxi ou VTC jusqu’au domaine.',
-          en: 'The venue can be reached via RER B, followed by a taxi or private ride.',
+          fr: 'Accès possible en RER B, puis bus, taxi ou VTC jusqu’au domaine. Sinon, en voiture, comptez environ 30 minutes depuis Paris.',
+          en: 'The venue can be reached via RER B, followed by a bus, taxi, or private ride. Otherwise, it is about a 30-minute drive from Paris.',
         },
       },
       {
