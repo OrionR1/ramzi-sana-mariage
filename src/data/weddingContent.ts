@@ -276,8 +276,8 @@ export const weddingContent = {
       {
         title: { fr: 'Adresse', en: 'Address' },
         body: {
-          fr: 'Chemin de la Geneste, 78117 Châteaufort, France.',
-          en: 'Chemin de la Geneste, 78117 Châteaufort, France.',
+          fr: 'Domaine de la Geneste, Chem. de la Geneste, 78117 Châteaufort',
+          en: 'Domaine de la Geneste, Chem. de la Geneste, 78117 Châteaufort',
         },
       },
       {
