@@ -162,7 +162,7 @@ export const weddingContent = {
     },
     body: {
       fr:
-        'Nous serions très heureux de vous retrouver à 14h00 à la mairie de Neuilly-sur-Seine, puis à 17h00 au Domaine de la Geneste, à Châteaufort 78117, pour célébrer notre mariage. La soirée se poursuivra autour d’un cocktail dînatoire, de musique et de danse — simplement, avec les personnes qui comptent pour nous.',
+        'Nous serions très heureux de vous retrouver à 14h00 à la mairie de Neuilly-sur-Seine pour notre mariage civil. La célébration du mariage aura lieu à 17h00 au Domaine de la Geneste, à Châteaufort 78117. La soirée se poursuivra autour d’un cocktail dînatoire, de musique et de danse — simplement, avec les personnes qui comptent pour nous.',
       en:
         'We would be delighted to welcome you at 2:00 PM to Neuilly-sur-Seine town hall, then at 5:00 PM to Domaine de la Geneste in Châteaufort 78117, to celebrate our wedding. The evening will continue with a cocktail-style dinner, music and dancing — simply, with the people who matter most to us.',
     },
@@ -183,7 +183,7 @@ export const weddingContent = {
     timeline: [
       {
         time: '14h00',
-        label: { fr: 'Cérémonie civile à la mairie de Neuilly-sur-Seine', en: 'Civil ceremony at Neuilly-sur-Seine town hall' },
+        label: { fr: 'Mariage civil à la mairie de Neuilly-sur-Seine', en: 'Civil ceremony at Neuilly-sur-Seine town hall' },
       },
       {
         time: '17h00',
@@ -225,7 +225,7 @@ export const weddingContent = {
         en: 'Neuilly-sur-Seine',
       },
       body: {
-        fr: 'La journée commencera à la mairie de Neuilly-sur-Seine pour la cérémonie civile, avant de se poursuivre au Domaine de la Geneste en fin d’après-midi.',
+        fr: 'La journée commencera à la mairie de Neuilly-sur-Seine pour le mariage civil, avant de se poursuivre au Domaine de la Geneste en fin d’après-midi.',
         en: 'The day will begin at Neuilly-sur-Seine town hall for the civil ceremony, before continuing at Domaine de la Geneste later in the afternoon.',
       },
       address: {
@@ -389,7 +389,7 @@ export const weddingContent = {
           en: 'What time should I arrive?',
         },
         answer: {
-          fr: 'La cérémonie civile aura lieu à 14h00 à la mairie de Neuilly-sur-Seine, puis nous vous retrouverons à 17h00 au Domaine de la Geneste.',
+          fr: 'Le mariage civil aura lieu à 14h00 à la mairie de Neuilly-sur-Seine, puis nous vous retrouverons à 17h00 au Domaine de la Geneste.',
           en: 'The civil ceremony will take place at 2:00 PM at Neuilly-sur-Seine town hall, and we will then meet again at 5:00 PM at Domaine de la Geneste.',
         },
       },
