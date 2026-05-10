@@ -163,7 +163,7 @@ export const weddingContent = {
       fr:
         'Nous serions très heureux de vous recevoir au Domaine de la Geneste, à Châteaufort 78117, pour célébrer notre mariage. Après la cérémonie, la soirée se poursuivra autour d’un cocktail dînatoire, d’un buffet, de musique et de danse — simplement, avec les personnes qui comptent pour nous.',
       en:
-        'We would be delighted to welcome you to Domaine de la Geneste, in Châteaufort, to celebrate our wedding. After the ceremony, the evening will continue with a cocktail reception, buffet, music and dancing — simply, with the people who matter most to us.',
+        'We would be delighted to welcome you to Domaine de la Geneste, in Châteaufort 78117, to celebrate our wedding. After the ceremony, the evening will continue with a cocktail-style dinner, buffet, music and dancing — simply, with the people who matter most to us.',
     },
   },
   programme: {
@@ -186,7 +186,7 @@ export const weddingContent = {
       },
       {
         time: '19h30',
-        label: { fr: 'Cocktail dînatoire / buffet', en: 'Cocktail buffet' },
+        label: { fr: 'Cocktail dînatoire / buffet', en: 'Cocktail-style dinner / buffet' },
       },
       {
         time: '22h00',
@@ -214,7 +214,7 @@ export const weddingContent = {
       fr:
         'À seulement trente minutes de Paris en voiture, le Domaine de la Geneste nous accueille dans un cadre privé, calme et élégant. Un lieu à part, entouré de verdure, pour célébrer ce mariage avec simplicité et caractère.',
       en:
-        'Around thirty minutes from Paris by car, Domaine de la Geneste offers a private and elegant setting surrounded by greenery. A beautiful place to gather, celebrate, and spend the evening together.',
+        'Just thirty minutes from Paris by car, Domaine de la Geneste welcomes us into a private, calm, and elegant setting. A place apart, surrounded by greenery, to celebrate this wedding with simplicity and character.',
     },
     mapCta: {
       fr: 'Ouvrir dans Google Maps',
@@ -234,7 +234,7 @@ export const weddingContent = {
       fr:
         'Venez chic, élégant, fidèle à vous-même — et suffisamment à l’aise pour danser.',
       en:
-        'There is no strict dress code. Come chic, elegant, and true to yourself — with something you can dance in.',
+        'Come chic, elegant, true to yourself — and comfortable enough to dance.',
     },
   },
   rsvp: {
@@ -280,7 +280,7 @@ export const weddingContent = {
         title: { fr: 'Depuis Paris en voiture', en: 'From Paris by car' },
         body: {
           fr: 'Le Domaine de la Geneste se trouve à Châteaufort, à environ 30 minutes de Paris en voiture.',
-          en: 'Domaine de la Geneste is located in Châteaufort, around thirty minutes from Paris by car.',
+          en: 'Domaine de la Geneste is located in Châteaufort, around 30 minutes from Paris by car.',
         },
       },
       {
@@ -332,7 +332,7 @@ export const weddingContent = {
         },
         answer: {
           fr: 'Nous vous attendons à partir de 17h00. Merci d’arriver quelques minutes avant le début de la cérémonie.',
-          en: 'We look forward to welcoming you from 5:00 PM. Please arrive a few minutes before the ceremony begins.',
+          en: 'We look forward to welcoming you from 5:00 PM.',
         },
       },
       {
@@ -342,7 +342,7 @@ export const weddingContent = {
         },
         answer: {
           fr: 'La soirée se déroulera autour d’un cocktail dînatoire.',
-          en: 'No. The evening will be arranged as a cocktail reception and buffet, without assigned seating.',
+          en: 'The evening will unfold around a cocktail-style dinner.',
         },
       },
       {
@@ -352,7 +352,7 @@ export const weddingContent = {
         },
         answer: {
           fr: 'Une tenue chic et élégante sera parfaite.',
-          en: 'There is no strict dress code. Chic and elegant will be perfect.',
+          en: 'Chic and elegant will be perfect.',
         },
       },
     ] as FaqItem[],
@@ -400,7 +400,7 @@ export const weddingContent = {
     title: 'Sana & Ramzi Wedding',
     details: {
       fr: 'Célébration de mariage au Domaine de la Geneste. Cérémonie, cocktail dînatoire, musique et danse.',
-      en: 'Wedding celebration at Domaine de la Geneste. Ceremony, cocktail buffet, music and dancing.',
+      en: 'Wedding celebration at Domaine de la Geneste. Welcome drinks, cocktail-style dinner, music and dancing.',
     },
     endIso: '2026-09-13T02:00:00+02:00',
   },
