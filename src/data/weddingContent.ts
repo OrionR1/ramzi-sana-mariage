@@ -274,6 +274,13 @@ export const weddingContent = {
     },
     cards: [
       {
+        title: { fr: 'Adresse', en: 'Address' },
+        body: {
+          fr: 'Chemin de la Geneste, 78117 Châteaufort, France.',
+          en: 'Chemin de la Geneste, 78117 Châteaufort, France.',
+        },
+      },
+      {
         title: { fr: 'Depuis Paris en voiture', en: 'From Paris by car' },
         body: {
           fr: 'Le Domaine de la Geneste se trouve à Châteaufort, à environ 30 minutes de Paris en voiture.',
@@ -285,13 +292,6 @@ export const weddingContent = {
         body: {
           fr: 'Accès possible en RER B, puis bus, taxi ou VTC jusqu’au domaine.',
           en: 'The venue can be reached via RER B, followed by a bus, taxi, or private ride.',
-        },
-      },
-      {
-        title: { fr: 'Adresse', en: 'Address' },
-        body: {
-          fr: 'Chemin de la Geneste, 78117 Châteaufort, France.',
-          en: 'Chemin de la Geneste, 78117 Châteaufort, France.',
         },
       },
       {
