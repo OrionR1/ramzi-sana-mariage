@@ -221,9 +221,6 @@ export default function App() {
                         alt={language === 'fr' ? 'Sana et Ramzi' : 'Sana and Ramzi'}
                       />
                     </div>
-                    <p className="hero-caption reveal">
-                      {language === 'fr' ? 'Châteaufort, 12 septembre 2026' : 'Châteaufort, September 12, 2026'}
-                    </p>
                   </div>
                 </div>
               </div>
