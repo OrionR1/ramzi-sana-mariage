@@ -232,7 +232,7 @@ export const weddingContent = {
     },
     body: {
       fr:
-        'Aucun dress code imposé. Venez chic, élégant, fidèle à vous-même — et suffisamment à l’aise pour danser.',
+        'Venez chic, élégant, fidèle à vous-même — et suffisamment à l’aise pour danser.',
       en:
         'There is no strict dress code. Come chic, elegant, and true to yourself — with something you can dance in.',
     },
