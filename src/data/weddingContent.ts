@@ -274,9 +274,9 @@ export const weddingContent = {
     },
     cards: [
       {
-        title: { fr: 'Depuis Paris', en: 'From Paris' },
+        title: { fr: 'Depuis Paris en voiture', en: 'From Paris by car' },
         body: {
-          fr: 'Le Domaine de la Geneste se trouve à Châteaufort, à environ trente minutes de Paris en voiture.',
+          fr: 'Le Domaine de la Geneste se trouve à Châteaufort, à environ 30 minutes de Paris en voiture.',
           en: 'Domaine de la Geneste is located in Châteaufort, around thirty minutes from Paris by car.',
         },
       },
