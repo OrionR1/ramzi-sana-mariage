@@ -176,17 +176,13 @@ export const weddingContent = {
       en: 'Please join us from 5:00 PM.',
     },
     note: {
-      fr: 'Après la cérémonie, la soirée se poursuivra autour d’un cocktail dînatoire et d’un buffet, dans un format libre, élégant et convivial — sans dîner assis traditionnel.',
-      en: 'After the ceremony, the evening will continue with a cocktail reception and buffet — an elegant, relaxed format without a traditional seated dinner.',
+      fr: 'La soirée se poursuivra autour d’un cocktail dînatoire et d’un buffet, dans un format libre, élégant et convivial — sans dîner assis traditionnel.',
+      en: 'The evening will continue with a cocktail reception and buffet — an elegant, relaxed format without a traditional seated dinner.',
     },
     timeline: [
       {
         time: '17h00',
-        label: { fr: 'Cérémonie', en: 'Ceremony' },
-      },
-      {
-        time: '18h00',
-        label: { fr: 'Cocktail', en: 'Cocktail' },
+        label: { fr: 'Arrivée sur les lieux et vin d’honneur avec les mariés', en: 'Arrival at the venue and welcome drinks with the newlyweds' },
       },
       {
         time: '19h30',
