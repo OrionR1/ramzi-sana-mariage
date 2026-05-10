@@ -212,7 +212,7 @@ export const weddingContent = {
     },
     body: {
       fr:
-        'À seulement trente minutes de Paris en voiture, le Domaine de la Geneste nous accueille dans un cadre privé, calme et élégant. Un lieu à part, entouré de verdure, pour célébrer cette journée avec simplicité et caractère.',
+        'À seulement trente minutes de Paris en voiture, le Domaine de la Geneste nous accueille dans un cadre privé, calme et élégant. Un lieu à part, entouré de verdure, pour célébrer ce mariage avec simplicité et caractère.',
       en:
         'Around thirty minutes from Paris by car, Domaine de la Geneste offers a private and elegant setting surrounded by greenery. A beautiful place to gather, celebrate, and spend the evening together.',
     },
