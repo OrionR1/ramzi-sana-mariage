@@ -161,9 +161,9 @@ export const weddingContent = {
     },
     body: {
       fr:
-        'Nous serions très heureux de vous recevoir au Domaine de la Geneste, à Châteaufort 78117, pour célébrer notre mariage. Après la cérémonie, la soirée se poursuivra autour d’un cocktail dînatoire, d’un buffet, de musique et de danse — simplement, avec les personnes qui comptent pour nous.',
+        'Nous serions très heureux de vous recevoir au Domaine de la Geneste, à Châteaufort 78117, pour célébrer notre mariage. Après la cérémonie, la soirée se poursuivra autour d’un cocktail dînatoire, de musique et de danse — simplement, avec les personnes qui comptent pour nous.',
       en:
-        'We would be delighted to welcome you to Domaine de la Geneste, in Châteaufort 78117, to celebrate our wedding. After the ceremony, the evening will continue with a cocktail-style dinner, buffet, music and dancing — simply, with the people who matter most to us.',
+        'We would be delighted to welcome you to Domaine de la Geneste, in Châteaufort 78117, to celebrate our wedding. After the ceremony, the evening will continue with a cocktail-style dinner, music and dancing — simply, with the people who matter most to us.',
     },
   },
   programme: {
@@ -186,7 +186,7 @@ export const weddingContent = {
       },
       {
         time: '19h30',
-        label: { fr: 'Cocktail dînatoire / buffet', en: 'Cocktail-style dinner / buffet' },
+        label: { fr: 'Cocktail dînatoire', en: 'Cocktail-style dinner' },
       },
       {
         time: '22h00',
