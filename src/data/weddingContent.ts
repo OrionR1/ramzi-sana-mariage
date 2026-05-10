@@ -345,18 +345,8 @@ export const weddingContent = {
           en: 'Will there be a seated dinner?',
         },
         answer: {
-          fr: 'Non. La soirée se déroulera autour d’un cocktail dînatoire et d’un buffet, dans un format plus libre.',
+          fr: 'La soirée se déroulera autour d’un cocktail dînatoire.',
           en: 'No. The evening will be arranged as a cocktail reception and buffet, without assigned seating.',
-        },
-      },
-      {
-        question: {
-          fr: 'Où dormir ?',
-          en: 'Where should I stay?',
-        },
-        answer: {
-          fr: 'Des recommandations d’hébergement proches du domaine seront partagées prochainement.',
-          en: 'Recommendations for nearby accommodation will be shared soon.',
         },
       },
       {
@@ -365,7 +355,7 @@ export const weddingContent = {
           en: 'Is there a dress code?',
         },
         answer: {
-          fr: 'Pas de dress code strict. Une tenue chic et élégante sera parfaite.',
+          fr: 'Une tenue chic et élégante sera parfaite.',
           en: 'There is no strict dress code. Chic and elegant will be perfect.',
         },
       },
