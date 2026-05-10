@@ -25,10 +25,10 @@ export type GalleryItem = {
 };
 
 export const weddingContent = {
-  couple: 'Ramzi & Sana',
+  couple: 'Sana & Ramzi',
   names: {
-    first: 'Ramzi',
-    second: 'Sana',
+    first: 'Sana',
+    second: 'Ramzi',
   },
   date: {
     iso: '2026-09-12T17:00:00+02:00',
@@ -84,8 +84,8 @@ export const weddingContent = {
   },
   intro: {
     overline: {
-      fr: 'Ramzi & Sana',
-      en: 'Ramzi & Sana',
+      fr: 'Sana & Ramzi',
+      en: 'Sana & Ramzi',
     },
     title: {
       fr: '12 septembre 2026',
@@ -385,8 +385,8 @@ export const weddingContent = {
         caption: { fr: 'Portrait', en: 'Portrait' },
         image: 'pics/83A3EA6C-1B04-47F1-83F0-2DA0C8C61CE0_4_5005_c.jpeg',
         alt: {
-          fr: 'Ramzi et Sana',
-          en: 'Ramzi and Sana',
+          fr: 'Sana et Ramzi',
+          en: 'Sana and Ramzi',
         },
       },
       {
@@ -401,7 +401,7 @@ export const weddingContent = {
     ] as GalleryItem[],
   },
   calendar: {
-    title: 'Ramzi & Sana Wedding',
+    title: 'Sana & Ramzi Wedding',
     details: {
       fr: 'Célébration de mariage au Domaine de la Geneste. Cérémonie, cocktail dînatoire, musique et danse.',
       en: 'Wedding celebration at Domaine de la Geneste. Ceremony, cocktail buffet, music and dancing.',
@@ -409,7 +409,7 @@ export const weddingContent = {
     endIso: '2026-09-13T02:00:00+02:00',
   },
   footer: {
-    signature: 'Ramzi & Sana — 12.09.2026',
+    signature: 'Sana & Ramzi — 12.09.2026',
     line: {
       fr: 'Avec vous, ce sera encore plus beau.',
       en: 'It will mean even more with you there.',

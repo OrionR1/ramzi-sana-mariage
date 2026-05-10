@@ -27,7 +27,7 @@ function buildCalendarLinks() {
 
   const ics = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Ramzi and Sana//Wedding Invitation//EN
+PRODID:-//Sana and Ramzi//Wedding Invitation//EN
 BEGIN:VEVENT
 UID:ramzi-sana-wedding-20260912@example.com
 DTSTAMP:${formatGoogleCalendarDate(new Date().toISOString())}
@@ -218,7 +218,7 @@ export default function App() {
                     <div className="hero-visual reveal">
                       <img
                         src={assetUrl(weddingContent.images.hero)}
-                        alt={language === 'fr' ? 'Ramzi et Sana' : 'Ramzi and Sana'}
+                        alt={language === 'fr' ? 'Sana et Ramzi' : 'Sana and Ramzi'}
                       />
                     </div>
                     <p className="hero-caption reveal">
