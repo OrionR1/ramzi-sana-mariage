@@ -80,6 +80,7 @@ export const weddingContent = {
   },
   images: {
     hero: 'pics/us.jpeg',
+    neuilly: 'pics/neuilly.jpg',
     venue: 'pics/domaine.jpg',
   },
   intro: {
@@ -207,26 +208,79 @@ export const weddingContent = {
   },
   venueSection: {
     title: {
-      fr: 'Le Domaine de la Geneste',
-      en: 'Domaine de la Geneste',
+      fr: 'Les lieux',
+      en: 'The venues',
     },
     subtitle: {
-      fr: 'Châteaufort, aux portes de Paris',
-      en: 'Châteaufort, just outside Paris',
+      fr: 'De Neuilly-sur-Seine à Châteaufort',
+      en: 'From Neuilly-sur-Seine to Châteaufort',
     },
-    body: {
-      fr:
-        'À seulement trente minutes de Paris en voiture, le Domaine de la Geneste nous accueille dans un cadre privé, calme et élégant. Un lieu à part, entouré de verdure, pour célébrer ce mariage avec simplicité et caractère.',
-      en:
-        'Just thirty minutes from Paris by car, Domaine de la Geneste welcomes us into a private, calm, and elegant setting. A place apart, surrounded by greenery, to celebrate this wedding with simplicity and character.',
+    townHall: {
+      title: {
+        fr: 'La mairie de Neuilly-sur-Seine',
+        en: 'Neuilly-sur-Seine Town Hall',
+      },
+      subtitle: {
+        fr: 'Neuilly-sur-Seine',
+        en: 'Neuilly-sur-Seine',
+      },
+      body: {
+        fr: 'La journée commencera à la mairie de Neuilly-sur-Seine pour la cérémonie civile, avant de se poursuivre au Domaine de la Geneste en fin d’après-midi.',
+        en: 'The day will begin at Neuilly-sur-Seine town hall for the civil ceremony, before continuing at Domaine de la Geneste later in the afternoon.',
+      },
+      address: {
+        fr: 'Mairie de Neuilly-sur-Seine, 92200 Neuilly-sur-Seine',
+        en: 'Neuilly-sur-Seine Town Hall, 92200 Neuilly-sur-Seine',
+      },
+      start: {
+        fr: '14h00',
+        en: '2:00 PM',
+      },
+      mapCta: {
+        fr: 'Ouvrir dans Google Maps',
+        en: 'Open in Google Maps',
+      },
+      mapsLink: 'https://www.google.com/maps/search/?api=1&query=Mairie%20de%20Neuilly-sur-Seine',
+      image: 'pics/neuilly.jpg',
+      imageAlt: {
+        fr: 'La mairie de Neuilly-sur-Seine',
+        en: 'Neuilly-sur-Seine town hall',
+      },
     },
-    mapCta: {
-      fr: 'Ouvrir dans Google Maps',
-      en: 'Open in Google Maps',
-    },
-    imageCaption: {
-      fr: 'Le domaine, à Châteaufort.',
-      en: 'The estate in Châteaufort.',
+    domain: {
+      title: {
+        fr: 'Le Domaine de la Geneste',
+        en: 'Domaine de la Geneste',
+      },
+      subtitle: {
+        fr: 'Châteaufort, aux portes de Paris',
+        en: 'Châteaufort, just outside Paris',
+      },
+      body: {
+        fr:
+          'À seulement trente minutes de Paris en voiture, le Domaine de la Geneste nous accueille dans un cadre privé, calme et élégant. Un lieu à part, entouré de verdure, pour célébrer ce mariage avec simplicité et caractère.',
+        en:
+          'Just thirty minutes from Paris by car, Domaine de la Geneste welcomes us into a private, calm, and elegant setting. A place apart, surrounded by greenery, to celebrate this wedding with simplicity and character.',
+      },
+      address: {
+        fr: 'Chemin de la Geneste, 78117 Châteaufort, France',
+        en: 'Chemin de la Geneste, 78117 Châteaufort, France',
+      },
+      start: {
+        fr: '17h00',
+        en: '5:00 PM',
+      },
+      mapCta: {
+        fr: 'Ouvrir dans Google Maps',
+        en: 'Open in Google Maps',
+      },
+      mapsLink:
+        'https://www.google.com/maps/search/?api=1&query=Chemin%20de%20la%20Geneste%2C%2078117%20Ch%C3%A2teaufort%2C%20France',
+      image: 'pics/domaine.jpg',
+      imageAlt: {
+        fr: 'Le Domaine de la Geneste',
+        en: 'Domaine de la Geneste',
+      },
     },
   },
   dressCode: {

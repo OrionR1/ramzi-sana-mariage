@@ -757,6 +757,7 @@ main {
 .info-grid,
 .faq-list,
 .gallery-grid,
+.venue-stack,
 .venue-grid {
   display: grid;
   gap: 1rem;
@@ -811,6 +812,14 @@ main {
   margin-bottom: 1rem !important;
   font-size: 1.05rem;
   color: var(--color-accent);
+}
+
+.venue-block-title {
+  margin: 0 0 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 0.98;
+  color: #2d201b;
 }
 
 .timeline {
@@ -1082,6 +1091,10 @@ main {
   .venue-grid {
     grid-template-columns: 1.05fr 0.95fr;
     align-items: stretch;
+  }
+
+  .venue-stack {
+    margin-bottom: 1rem;
   }
 
   .venue-grid .image-frame-photo {

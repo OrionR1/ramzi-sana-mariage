@@ -257,28 +257,58 @@ export default function App() {
                 title={t(weddingContent.venueSection.title)}
                 subtitle={t(weddingContent.venueSection.subtitle)}
               />
-              <div className="venue-grid">
+              <div className="venue-stack">
                 <div className="prose-panel reveal">
-                  <p>{t(weddingContent.venueSection.body)}</p>
+                  <p className="detail-label">{t(weddingContent.venueSection.townHall.subtitle)}</p>
+                  <h3 className="venue-block-title">{t(weddingContent.venueSection.townHall.title)}</h3>
+                  <p>{t(weddingContent.venueSection.townHall.body)}</p>
                   <div className="detail-stack">
                     <div>
                       <span className="detail-label">{t(weddingContent.ui.addressLabel)}</span>
-                      <p>{weddingContent.address}</p>
+                      <p>{t(weddingContent.venueSection.townHall.address)}</p>
                     </div>
                     <div>
                       <span className="detail-label">{t(weddingContent.ui.startLabel)}</span>
-                      <p>{weddingContent.scheduleStartTime[language]}</p>
+                      <p>{t(weddingContent.venueSection.townHall.start)}</p>
                     </div>
                   </div>
-                  <a className="button button-primary" href={weddingContent.mapsLink} target="_blank" rel="noreferrer">
-                    {t(weddingContent.venueSection.mapCta)}
+                  <a className="button button-primary" href={weddingContent.venueSection.townHall.mapsLink} target="_blank" rel="noreferrer">
+                    {t(weddingContent.venueSection.townHall.mapCta)}
                   </a>
                 </div>
-                <figure className="image-placeholder reveal" aria-label={t(weddingContent.venueSection.imageCaption)}>
+                <figure className="image-placeholder reveal" aria-label={t(weddingContent.venueSection.townHall.imageAlt)}>
                   <div className="image-frame image-frame-photo">
                     <img
-                      src={assetUrl(weddingContent.images.venue)}
-                      alt={language === 'fr' ? 'Le Domaine de la Geneste' : 'Domaine de la Geneste'}
+                      src={assetUrl(weddingContent.venueSection.townHall.image)}
+                      alt={t(weddingContent.venueSection.townHall.imageAlt)}
+                    />
+                  </div>
+                </figure>
+              </div>
+              <div className="venue-grid">
+                <div className="prose-panel reveal">
+                  <p className="detail-label">{t(weddingContent.venueSection.domain.subtitle)}</p>
+                  <h3 className="venue-block-title">{t(weddingContent.venueSection.domain.title)}</h3>
+                  <p>{t(weddingContent.venueSection.domain.body)}</p>
+                  <div className="detail-stack">
+                    <div>
+                      <span className="detail-label">{t(weddingContent.ui.addressLabel)}</span>
+                      <p>{t(weddingContent.venueSection.domain.address)}</p>
+                    </div>
+                    <div>
+                      <span className="detail-label">{t(weddingContent.ui.startLabel)}</span>
+                      <p>{t(weddingContent.venueSection.domain.start)}</p>
+                    </div>
+                  </div>
+                  <a className="button button-primary" href={weddingContent.venueSection.domain.mapsLink} target="_blank" rel="noreferrer">
+                    {t(weddingContent.venueSection.domain.mapCta)}
+                  </a>
+                </div>
+                <figure className="image-placeholder reveal" aria-label={t(weddingContent.venueSection.domain.imageAlt)}>
+                  <div className="image-frame image-frame-photo">
+                    <img
+                      src={assetUrl(weddingContent.venueSection.domain.image)}
+                      alt={t(weddingContent.venueSection.domain.imageAlt)}
                     />
                   </div>
                 </figure>
