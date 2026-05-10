@@ -281,7 +281,6 @@ export default function App() {
                       alt={language === 'fr' ? 'Le Domaine de la Geneste' : 'Domaine de la Geneste'}
                     />
                   </div>
-                  <figcaption>{t(weddingContent.venueSection.imageCaption)}</figcaption>
                 </figure>
               </div>
             </section>
