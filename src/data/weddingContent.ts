@@ -172,14 +172,18 @@ export const weddingContent = {
       en: 'Schedule',
     },
     intro: {
-      fr: 'Rendez-vous à partir de 17h00.',
-      en: 'Please join us from 5:00 PM.',
+      fr: 'Rendez-vous à 14h00 à la mairie de Neuilly-sur-Seine, puis à 17h00 au Domaine de la Geneste.',
+      en: 'Please join us at 2:00 PM at Neuilly-sur-Seine town hall, then at 5:00 PM at Domaine de la Geneste.',
     },
     note: {
       fr: '',
       en: '',
     },
     timeline: [
+      {
+        time: '14h00',
+        label: { fr: 'Cérémonie civile à la mairie de Neuilly-sur-Seine', en: 'Civil ceremony at Neuilly-sur-Seine town hall' },
+      },
       {
         time: '17h00',
         label: { fr: 'Arrivée sur les lieux et vin d’honneur avec les mariés', en: 'Arrival at the venue and welcome drinks with the newlyweds' },
@@ -331,8 +335,8 @@ export const weddingContent = {
           en: 'What time should I arrive?',
         },
         answer: {
-          fr: 'Nous vous attendons à partir de 17h00. Merci d’arriver quelques minutes avant le début de la cérémonie.',
-          en: 'We look forward to welcoming you from 5:00 PM.',
+          fr: 'La cérémonie civile aura lieu à 14h00 à la mairie de Neuilly-sur-Seine, puis nous vous retrouverons à 17h00 au Domaine de la Geneste.',
+          en: 'The civil ceremony will take place at 2:00 PM at Neuilly-sur-Seine town hall, and we will then meet again at 5:00 PM at Domaine de la Geneste.',
         },
       },
       {
