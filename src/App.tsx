@@ -349,22 +349,6 @@ export default function App() {
               </div>
             </section>
 
-            <section className="section gallery-section">
-              <SectionTitle title={t(weddingContent.gallery.title)} subtitle={t(weddingContent.gallery.intro)} />
-              <div className="gallery-grid">
-                {weddingContent.gallery.items.map((item, index) => (
-                  <figure className="gallery-card reveal" key={item.title.en}>
-                    <div className="gallery-placeholder gallery-photo">
-                      <img src={assetUrl(item.image)} alt={item.alt[language]} />
-                    </div>
-                    <figcaption>
-                      <strong>{item.title[language]}</strong>
-                      <p>{item.caption[language]}</p>
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            </section>
           </main>
 
           <a className="floating-rsvp" href={weddingContent.rsvpLink} target="_blank" rel="noreferrer">
