@@ -176,8 +176,8 @@ export const weddingContent = {
       en: 'Please join us from 5:00 PM.',
     },
     note: {
-      fr: 'La soirée se poursuivra autour d’un cocktail dînatoire et d’un buffet, dans un format libre, élégant et convivial — sans dîner assis traditionnel.',
-      en: 'The evening will continue with a cocktail reception and buffet — an elegant, relaxed format without a traditional seated dinner.',
+      fr: '',
+      en: '',
     },
     timeline: [
       {
