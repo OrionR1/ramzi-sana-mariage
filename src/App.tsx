@@ -257,7 +257,7 @@ export default function App() {
                 title={t(weddingContent.venueSection.title)}
                 subtitle={t(weddingContent.venueSection.subtitle)}
               />
-              <div className="venue-stack">
+              <div className="venue-grid venue-grid-spaced">
                 <div className="prose-panel reveal">
                   <p className="detail-label">{t(weddingContent.venueSection.townHall.subtitle)}</p>
                   <h3 className="venue-block-title">{t(weddingContent.venueSection.townHall.title)}</h3>

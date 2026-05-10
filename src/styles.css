@@ -757,7 +757,6 @@ main {
 .info-grid,
 .faq-list,
 .gallery-grid,
-.venue-stack,
 .venue-grid {
   display: grid;
   gap: 1rem;
@@ -1093,9 +1092,9 @@ main {
     align-items: stretch;
   }
 
-  .venue-stack {
-    margin-bottom: 1rem;
-  }
+.venue-grid-spaced {
+  margin-bottom: 1rem;
+}
 
   .venue-grid .image-frame-photo {
     min-height: 100%;
