@@ -115,7 +115,7 @@ export const weddingContent = {
       en: '12 September 2026',
     },
     access: {
-      fr: '14h00 — Mairie de Neuilly-sur-Seine · 17h00 — Domaine de la Geneste',
+      fr: '14h00 — Mairie de Neuilly-sur-Seine\n17h00 — Domaine de la Geneste',
       en: '2:00 PM — Neuilly-sur-Seine town hall · 5:00 PM — Domaine de la Geneste',
     },
     title: {
@@ -162,7 +162,7 @@ export const weddingContent = {
     },
     body: {
       fr:
-        'Nous serions très heureux de vous retrouver à 14h00 à la mairie de Neuilly-sur-Seine pour notre mariage civil. La célébration du mariage aura lieu à 17h00 au Domaine de la Geneste, à Châteaufort 78117. La soirée se poursuivra autour d’un cocktail dînatoire, de musique et de danse — simplement, avec les personnes qui comptent pour nous.',
+        'Nous serions très heureux de partager cette journée si spéciale avec vous.\n\nRendez-vous à 14h00 à la mairie de Neuilly-sur-Seine pour notre mariage civil, avant de poursuivre les festivités à partir de 17h00 au Domaine de la Geneste, à Châteaufort.\n\nNous avons hâte de célébrer ce moment entourés des personnes qui comptent le plus pour nous.',
       en:
         'We would be delighted to welcome you at 2:00 PM to Neuilly-sur-Seine town hall, then at 5:00 PM to Domaine de la Geneste in Châteaufort 78117, to celebrate our wedding. The evening will continue with a cocktail-style dinner, music and dancing — simply, with the people who matter most to us.',
     },
@@ -199,8 +199,8 @@ export const weddingContent = {
       },
       {
         time: {
-          fr: 'Fin à préciser',
-          en: 'End time to be confirmed',
+          fr: '02h00',
+          en: '2:00 AM',
         },
         label: { fr: 'Derniers verres, dernière danse', en: 'Last drinks, last dance' },
       },
@@ -225,11 +225,11 @@ export const weddingContent = {
         en: 'Neuilly-sur-Seine',
       },
       body: {
-        fr: 'La journée commencera à la mairie de Neuilly-sur-Seine pour le mariage civil, avant de se poursuivre au Domaine de la Geneste en fin d’après-midi.',
+        fr: 'La journée débutera dans le cadre élégant et raffiné de la mairie de Neuilly-sur-Seine, où nous aurons la joie de célébrer notre mariage civil entourés de nos proches.\n\nLa cérémonie commencera à 14h, nous comptons donc sur votre ponctualité afin de partager pleinement ce moment si important à nos côtés.',
         en: 'The day will begin at Neuilly-sur-Seine town hall for the civil ceremony, before continuing at Domaine de la Geneste later in the afternoon.',
       },
       address: {
-        fr: 'Mairie de Neuilly-sur-Seine, 92200 Neuilly-sur-Seine',
+        fr: '96 Av. Achille Peretti, 92200 Neuilly-sur-Seine, France',
         en: 'Neuilly-sur-Seine Town Hall, 92200 Neuilly-sur-Seine',
       },
       start: {
@@ -290,7 +290,7 @@ export const weddingContent = {
     },
     body: {
       fr:
-        'Venez chic, élégant, fidèle à vous-même — et suffisamment à l’aise pour danser.',
+        'Venez chic, élégant et fidèle à vous-même!',
       en:
         'Come chic, elegant, true to yourself — and comfortable enough to dance.',
     },

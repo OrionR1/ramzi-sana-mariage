@@ -240,7 +240,7 @@ export default function App() {
               <SectionTitle title={t(weddingContent.invitation.title)} />
               <div className="prose-panel reveal">
                 {invitationLead ? <p className="lead-text">{invitationLead}</p> : null}
-                <p>{t(weddingContent.invitation.body)}</p>
+                <p className="invitation-body">{t(weddingContent.invitation.body)}</p>
               </div>
             </section>
 

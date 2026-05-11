@@ -680,6 +680,11 @@ main {
   font-size: 0.98rem;
 }
 
+.hero-meta span,
+.invitation-body {
+  white-space: pre-line;
+}
+
 .hero-title {
   margin: 0;
   max-width: 12ch;
