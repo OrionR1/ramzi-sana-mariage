@@ -413,8 +413,8 @@ export const weddingContent = {
         en: 'Your RSVP has been received',
       },
       summaryBadge: {
-        fr: 'Confirmee',
-        en: 'Confirmed',
+        fr: 'Réponse enregistrée',
+        en: 'Response recorded',
       },
       summaryBody: {
         fr: 'Un email de confirmation vient de vous être envoyé.',
