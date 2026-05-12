@@ -7,6 +7,9 @@ import { SectionTitle } from './components/SectionTitle';
 import { Timeline } from './components/Timeline';
 import { sectionIds, weddingContent, type Language } from './data/weddingContent';
 
+type AttendanceValue = 'both' | 'townHallOnly' | 'domainOnly' | 'none';
+type RsvpStatus = 'idle' | 'submitting' | 'success' | 'error';
+
 function formatGoogleCalendarDate(isoDate: string) {
   return new Date(isoDate).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
 }
@@ -52,6 +55,15 @@ export default function App() {
   });
   const [introPhase, setIntroPhase] = useState<'closed' | 'opening' | 'open'>('closed');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [rsvpForm, setRsvpForm] = useState({
+    lastName: '',
+    firstName: '',
+    email: '',
+    attendance: '',
+    website: '',
+  });
+  const [rsvpStatus, setRsvpStatus] = useState<RsvpStatus>('idle');
+  const [rsvpFeedback, setRsvpFeedback] = useState('');
 
   const calendarLinks = useMemo(() => buildCalendarLinks(), []);
 
@@ -97,9 +109,91 @@ export default function App() {
   const rsvpBody = t(weddingContent.rsvp.body)
     .replace('[date limite]', rsvpDeadline)
     .replace('[deadline]', rsvpDeadline);
+  const rsvpEndpointConfigured =
+    weddingContent.rsvpEndpoint.trim() !== '' && !weddingContent.rsvpEndpoint.includes('[REMPLACER_PAR_URL_APPS_SCRIPT]');
+  const attendanceOptions: AttendanceValue[] = ['both', 'townHallOnly', 'domainOnly', 'none'];
 
   const scrollToProgramme = () => {
     document.getElementById(sectionIds.programme)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToRsvp = () => {
+    document.getElementById(sectionIds.rsvp)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleRsvpFieldChange = (field: 'lastName' | 'firstName' | 'email' | 'attendance' | 'website', value: string) => {
+    setRsvpForm((current) => ({
+      ...current,
+      [field]: value,
+    }));
+  };
+
+  const handleRsvpSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (!rsvpEndpointConfigured) {
+      setRsvpStatus('error');
+      setRsvpFeedback(t(weddingContent.rsvp.form.configError));
+      return;
+    }
+
+    if (rsvpForm.website.trim() !== '') {
+      setRsvpStatus('success');
+      setRsvpFeedback(t(weddingContent.rsvp.form.success));
+      return;
+    }
+
+    if (!rsvpForm.lastName.trim() || !rsvpForm.firstName.trim() || !rsvpForm.email.trim() || !rsvpForm.attendance) {
+      setRsvpStatus('error');
+      setRsvpFeedback(t(weddingContent.rsvp.form.required));
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(rsvpForm.email.trim())) {
+      setRsvpStatus('error');
+      setRsvpFeedback(t(weddingContent.rsvp.form.invalidEmail));
+      return;
+    }
+
+    setRsvpStatus('submitting');
+    setRsvpFeedback('');
+
+    const attendanceValue = rsvpForm.attendance as AttendanceValue;
+    const payload = new URLSearchParams({
+      language,
+      lastName: rsvpForm.lastName.trim(),
+      firstName: rsvpForm.firstName.trim(),
+      email: rsvpForm.email.trim(),
+      attendance: attendanceValue,
+      attendanceLabel: t(weddingContent.rsvp.form.attendanceOptions[attendanceValue]),
+      source: 'website',
+    });
+
+    try {
+      const response = await fetch(weddingContent.rsvpEndpoint, {
+        method: 'POST',
+        body: payload,
+      });
+
+      if (!response.ok) {
+        throw new Error(`RSVP failed with status ${response.status}`);
+      }
+
+      setRsvpStatus('success');
+      setRsvpFeedback(t(weddingContent.rsvp.form.success));
+      setRsvpForm({
+        lastName: '',
+        firstName: '',
+        email: '',
+        attendance: '',
+        website: '',
+      });
+    } catch (error) {
+      console.error(error);
+      setRsvpStatus('error');
+      setRsvpFeedback(t(weddingContent.rsvp.form.error));
+    }
   };
 
   const openInvitation = () => {
@@ -206,9 +300,9 @@ export default function App() {
                     {heroTitle ? <p className="hero-title reveal">{heroTitle}</p> : null}
                     {heroSignature ? <p className="hero-signature reveal">{heroSignature}</p> : null}
                     <div className="hero-actions reveal">
-                      <a className="button button-primary" href={weddingContent.rsvpLink} target="_blank" rel="noreferrer">
+                      <button type="button" className="button button-primary" onClick={scrollToRsvp}>
                         {t(weddingContent.hero.primaryCta)}
-                      </a>
+                      </button>
                       <button type="button" className="button button-secondary" onClick={scrollToProgramme}>
                         {t(weddingContent.hero.secondaryCta)}
                       </button>
@@ -326,19 +420,86 @@ export default function App() {
               <SectionTitle title={t(weddingContent.rsvp.title)} />
               <div className="rsvp-panel reveal">
                 <p>{rsvpBody}</p>
-                <div className="hero-actions">
-                  <a className="button button-primary" href={weddingContent.rsvpLink} target="_blank" rel="noreferrer">
-                    {t(weddingContent.rsvp.primaryCta)}
-                  </a>
-                  <a
-                    className="button button-secondary"
-                    href={calendarLinks.icsHref}
-                    download="ramzi-sana-wedding.ics"
-                  >
-                    {t(weddingContent.rsvp.calendarCta)}
-                  </a>
-                </div>
+                <form className="rsvp-form" onSubmit={handleRsvpSubmit}>
+                  <div className="rsvp-form-grid">
+                    <label className="rsvp-field">
+                      <span>{t(weddingContent.rsvp.form.lastName)}</span>
+                      <input
+                        type="text"
+                        name="lastName"
+                        autoComplete="family-name"
+                        value={rsvpForm.lastName}
+                        onChange={(event) => handleRsvpFieldChange('lastName', event.target.value)}
+                        required
+                      />
+                    </label>
+                    <label className="rsvp-field">
+                      <span>{t(weddingContent.rsvp.form.firstName)}</span>
+                      <input
+                        type="text"
+                        name="firstName"
+                        autoComplete="given-name"
+                        value={rsvpForm.firstName}
+                        onChange={(event) => handleRsvpFieldChange('firstName', event.target.value)}
+                        required
+                      />
+                    </label>
+                  </div>
+                  <label className="rsvp-field">
+                    <span>{t(weddingContent.rsvp.form.email)}</span>
+                    <input
+                      type="email"
+                      name="email"
+                      autoComplete="email"
+                      value={rsvpForm.email}
+                      onChange={(event) => handleRsvpFieldChange('email', event.target.value)}
+                      required
+                    />
+                  </label>
+                  <label className="rsvp-field">
+                    <span>{t(weddingContent.rsvp.form.attendance)}</span>
+                    <select
+                      name="attendance"
+                      value={rsvpForm.attendance}
+                      onChange={(event) => handleRsvpFieldChange('attendance', event.target.value)}
+                      required
+                    >
+                      <option value="">{t(weddingContent.rsvp.form.placeholder)}</option>
+                      {attendanceOptions.map((option) => (
+                        <option key={option} value={option}>
+                          {t(weddingContent.rsvp.form.attendanceOptions[option])}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="rsvp-honeypot" aria-hidden="true" tabIndex={-1}>
+                    <span>Website</span>
+                    <input
+                      type="text"
+                      name="website"
+                      autoComplete="off"
+                      value={rsvpForm.website}
+                      onChange={(event) => handleRsvpFieldChange('website', event.target.value)}
+                      tabIndex={-1}
+                    />
+                  </label>
+                  <div className="hero-actions">
+                    <button className="button button-primary" type="submit" disabled={rsvpStatus === 'submitting'}>
+                      {rsvpStatus === 'submitting' ? t(weddingContent.rsvp.form.submitting) : t(weddingContent.rsvp.form.submit)}
+                    </button>
+                    <a
+                      className="button button-secondary"
+                      href={calendarLinks.icsHref}
+                      download="ramzi-sana-wedding.ics"
+                    >
+                      {t(weddingContent.rsvp.calendarCta)}
+                    </a>
+                  </div>
+                </form>
                 <p className="rsvp-help">{t(weddingContent.rsvp.help)}</p>
+                {rsvpFeedback ? (
+                  <p className={`rsvp-feedback ${rsvpStatus === 'success' ? 'is-success' : 'is-error'}`}>{rsvpFeedback}</p>
+                ) : null}
                 {weddingContent.rsvpEmail !== '[REMPLACER_PAR_EMAIL]' ? (
                   <p className="rsvp-help">
                     <a href={`mailto:${weddingContent.rsvpEmail}`}>{weddingContent.rsvpEmail}</a>
@@ -377,9 +538,9 @@ export default function App() {
 
           </main>
 
-          <a className="floating-rsvp" href={weddingContent.rsvpLink} target="_blank" rel="noreferrer">
+          <button type="button" className="floating-rsvp" onClick={scrollToRsvp}>
             {t(weddingContent.ui.floatingRsvp)}
-          </a>
+          </button>
 
           <footer className="footer">
             <p>{weddingContent.footer.signature}</p>

@@ -54,7 +54,8 @@ export const weddingContent = {
   address: 'Chemin de la Geneste, 78117 Châteaufort, France',
   mapsLink:
     'https://www.google.com/maps/search/?api=1&query=Chemin%20de%20la%20Geneste%2C%2078117%20Ch%C3%A2teaufort%2C%20France',
-  rsvpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdi2tlFE4cRWuOifaA_FT9PEC_5zWp4xzG-3ASeuYFXwMMCuA/viewform?usp=publish-editor',
+  rsvpLink: '#rsvp',
+  rsvpEndpoint: '[REMPLACER_PAR_URL_APPS_SCRIPT]',
   rsvpEmail: '[REMPLACER_PAR_EMAIL]',
   rsvpDeadline: {
     fr: '15 juin 2026',
@@ -305,12 +306,12 @@ export const weddingContent = {
       en: 'Please confirm your attendance by June 15, 2026.',
     },
     help: {
-      fr: 'Le formulaire de réponse sera disponible prochainement.',
-      en: 'The RSVP form will be available soon.',
+      fr: 'Merci de remplir ce formulaire en quelques secondes.',
+      en: 'Please fill out this form in just a few seconds.',
     },
     primaryCta: {
       fr: "Répondre à l'invitation",
-      en: 'Open RSVP form',
+      en: 'RSVP',
     },
     calendarCta: {
       fr: 'Ajouter au calendrier',
@@ -319,6 +320,74 @@ export const weddingContent = {
     googleCalendarCta: {
       fr: 'Ou ouvrir dans Google Calendar',
       en: 'Or open in Google Calendar',
+    },
+    form: {
+      lastName: {
+        fr: 'Nom',
+        en: 'Last name',
+      },
+      firstName: {
+        fr: 'Prénom',
+        en: 'First name',
+      },
+      email: {
+        fr: 'Email',
+        en: 'Email',
+      },
+      attendance: {
+        fr: 'Serez-vous présent ?',
+        en: 'Will you be attending?',
+      },
+      attendanceOptions: {
+        both: {
+          fr: 'Oui, à la mairie et au domaine',
+          en: 'Yes, at the town hall and the estate',
+        },
+        townHallOnly: {
+          fr: 'Oui, à la mairie uniquement',
+          en: 'Yes, at the town hall only',
+        },
+        domainOnly: {
+          fr: 'Oui, au domaine uniquement',
+          en: 'Yes, at the estate only',
+        },
+        none: {
+          fr: 'Non, je ne pourrai malheureusement pas être présent(e)',
+          en: 'No, unfortunately I will not be able to attend',
+        },
+      },
+      placeholder: {
+        fr: 'Sélectionnez une réponse',
+        en: 'Select an answer',
+      },
+      submit: {
+        fr: 'Envoyer ma réponse',
+        en: 'Submit RSVP',
+      },
+      submitting: {
+        fr: 'Envoi en cours...',
+        en: 'Submitting...',
+      },
+      success: {
+        fr: 'Merci, votre réponse a bien été enregistrée.',
+        en: 'Thank you, your RSVP has been recorded.',
+      },
+      error: {
+        fr: "Une erreur s'est produite. Merci de réessayer dans quelques instants.",
+        en: 'Something went wrong. Please try again in a moment.',
+      },
+      configError: {
+        fr: "Le formulaire RSVP n'est pas encore configuré.",
+        en: 'The RSVP form is not configured yet.',
+      },
+      required: {
+        fr: 'Ce champ est requis.',
+        en: 'This field is required.',
+      },
+      invalidEmail: {
+        fr: 'Merci de saisir une adresse email valide.',
+        en: 'Please enter a valid email address.',
+      },
     },
   },
   practicalInfo: {
