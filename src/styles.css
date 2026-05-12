@@ -982,6 +982,50 @@ main {
   margin: 1.1rem 0 0.65rem;
 }
 
+.rsvp-success-card.is-confirmed {
+  border: 1px solid rgba(122, 153, 122, 0.36);
+  background:
+    linear-gradient(180deg, rgba(248, 253, 247, 0.98), rgba(239, 248, 238, 0.96)),
+    radial-gradient(circle at top left, rgba(122, 153, 122, 0.12), transparent 34%);
+  box-shadow: 0 18px 34px rgba(73, 101, 73, 0.12);
+}
+
+.rsvp-success-card.is-confirmed::before {
+  background:
+    linear-gradient(45deg, transparent 0, transparent 44%, rgba(122, 153, 122, 0.06) 50%, transparent 56%, transparent 100%),
+    radial-gradient(circle at 16% 18%, rgba(87, 120, 87, 0.08), transparent 18%);
+}
+
+.rsvp-success-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.rsvp-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(101, 138, 101, 0.14);
+  border: 1px solid rgba(101, 138, 101, 0.24);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4a694c;
+}
+
+.rsvp-status-pill::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #6f9a70;
+  box-shadow: 0 0 0 0.18rem rgba(111, 154, 112, 0.16);
+}
+
 .rsvp-form {
   display: grid;
   gap: 1rem;
@@ -1232,6 +1276,10 @@ main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .rsvp-success-header {
+    align-items: flex-start;
+  }
+
   .venue-grid {
     grid-template-columns: 1.05fr 0.95fr;
     align-items: stretch;
@@ -1287,6 +1335,15 @@ main {
 
   .venue-block-title {
     font-size: clamp(2.2rem, 12vw, 3.3rem);
+  }
+
+  .rsvp-success-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rsvp-status-pill {
+    padding: 0.38rem 0.72rem;
   }
 
   .gate-seal-button {

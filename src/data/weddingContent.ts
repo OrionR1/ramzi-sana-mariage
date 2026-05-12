@@ -412,6 +412,10 @@ export const weddingContent = {
         fr: 'Votre réponse a bien été reçue',
         en: 'Your RSVP has been received',
       },
+      summaryBadge: {
+        fr: 'Confirmee',
+        en: 'Confirmed',
+      },
       summaryBody: {
         fr: 'Un email de confirmation vient de vous être envoyé.',
         en: 'A confirmation email has just been sent to you.',
@@ -419,6 +423,10 @@ export const weddingContent = {
       editPrompt: {
         fr: 'Besoin de modifier votre réponse ? Vous pouvez soumettre à nouveau ce formulaire à tout moment.',
         en: 'Need to update your answer? You can submit this form again at any time.',
+      },
+      editCta: {
+        fr: 'Modifier ma reponse',
+        en: 'Update my RSVP',
       },
       error: {
         fr: "Une erreur s'est produite. Merci de réessayer dans quelques instants.",
