@@ -768,6 +768,7 @@ main {
 .info-grid,
 .faq-list,
 .gallery-grid,
+.day-glance-grid,
 .venue-grid {
   display: grid;
   gap: 1rem;
@@ -822,6 +823,56 @@ main {
   margin-bottom: 1rem !important;
   font-size: 1.05rem;
   color: var(--color-accent);
+}
+
+.invitation-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.day-glance-card,
+.rsvp-success-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.35rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255, 252, 247, 0.94), rgba(247, 242, 235, 0.9));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.day-glance-card::before,
+.rsvp-success-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(45deg, transparent 0, transparent 44%, rgba(215, 185, 167, 0.04) 50%, transparent 56%, transparent 100%),
+    radial-gradient(circle at 18% 20%, rgba(33, 27, 23, 0.025), transparent 18%);
+}
+
+.day-glance-time {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.day-glance-card h3,
+.rsvp-success-card h3 {
+  margin: 0 0 0.45rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  line-height: 0.98;
+  color: #2d201b;
+}
+
+.day-glance-card p,
+.rsvp-success-card p {
+  margin: 0;
+  line-height: 1.75;
 }
 
 .venue-block-title {
@@ -923,6 +974,12 @@ main {
 .rsvp-panel {
   display: grid;
   gap: 1rem;
+}
+
+.rsvp-success-meta {
+  display: grid;
+  gap: 1rem;
+  margin: 1.1rem 0 0.65rem;
 }
 
 .rsvp-form {
@@ -1166,6 +1223,11 @@ main {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .day-glance-grid,
+  .rsvp-success-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .rsvp-form-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1221,6 +1283,10 @@ main {
 
   .gate-body {
     font-size: 0.92rem;
+  }
+
+  .venue-block-title {
+    font-size: clamp(2.2rem, 12vw, 3.3rem);
   }
 
   .gate-seal-button {

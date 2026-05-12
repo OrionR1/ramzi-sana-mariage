@@ -5,10 +5,16 @@ import { InfoCard } from './components/InfoCard';
 import { LanguageSwitch } from './components/LanguageSwitch';
 import { SectionTitle } from './components/SectionTitle';
 import { Timeline } from './components/Timeline';
-import { sectionIds, weddingContent, type Language } from './data/weddingContent';
+import { sectionIds, weddingContent, type DaySummaryItem, type Language } from './data/weddingContent';
 
 type AttendanceValue = 'both' | 'townHallOnly' | 'domainOnly' | 'none';
 type RsvpStatus = 'idle' | 'submitting' | 'success' | 'error';
+type RsvpSummary = {
+  lastName: string;
+  firstName: string;
+  email: string;
+  attendance: AttendanceValue;
+};
 
 function formatGoogleCalendarDate(isoDate: string) {
   return new Date(isoDate).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
@@ -64,6 +70,7 @@ export default function App() {
   });
   const [rsvpStatus, setRsvpStatus] = useState<RsvpStatus>('idle');
   const [rsvpFeedback, setRsvpFeedback] = useState('');
+  const [rsvpSummary, setRsvpSummary] = useState<RsvpSummary | null>(null);
 
   const calendarLinks = useMemo(() => buildCalendarLinks(), []);
 
@@ -179,6 +186,12 @@ export default function App() {
 
       setRsvpStatus('success');
       setRsvpFeedback(t(weddingContent.rsvp.form.success));
+      setRsvpSummary({
+        lastName: rsvpForm.lastName.trim(),
+        firstName: rsvpForm.firstName.trim(),
+        email: rsvpForm.email.trim(),
+        attendance: attendanceValue,
+      });
       setRsvpForm({
         lastName: '',
         firstName: '',
@@ -333,6 +346,15 @@ export default function App() {
                 {invitationLead ? <p className="lead-text">{invitationLead}</p> : null}
                 <p className="invitation-body">{t(weddingContent.invitation.body)}</p>
               </div>
+              <div className="day-glance-grid">
+                {weddingContent.dayAtGlance.items.map((item: DaySummaryItem) => (
+                  <article className="day-glance-card reveal" key={item.title.en}>
+                    <p className="day-glance-time">{item.time[language]}</p>
+                    <h3>{item.title[language]}</h3>
+                    <p>{item.body[language]}</p>
+                  </article>
+                ))}
+              </div>
             </section>
 
             <section className="section" id={sectionIds.programme}>
@@ -417,6 +439,26 @@ export default function App() {
               <SectionTitle title={t(weddingContent.rsvp.title)} />
               <div className="rsvp-panel reveal">
                 <p>{rsvpBody}</p>
+                {rsvpStatus === 'success' && rsvpSummary ? (
+                  <div className="rsvp-success-card">
+                    <p className="detail-label">{t(weddingContent.rsvp.form.summaryTitle)}</p>
+                    <h3>
+                      {rsvpSummary.firstName} {rsvpSummary.lastName}
+                    </h3>
+                    <p>{t(weddingContent.rsvp.form.summaryBody)}</p>
+                    <div className="rsvp-success-meta">
+                      <div>
+                        <span className="detail-label">{t(weddingContent.rsvp.form.email)}</span>
+                        <p>{rsvpSummary.email}</p>
+                      </div>
+                      <div>
+                        <span className="detail-label">{t(weddingContent.rsvp.form.attendance)}</span>
+                        <p>{t(weddingContent.rsvp.form.attendanceOptions[rsvpSummary.attendance])}</p>
+                      </div>
+                    </div>
+                    <p className="rsvp-help">{t(weddingContent.rsvp.form.editPrompt)}</p>
+                  </div>
+                ) : null}
                 <form className="rsvp-form" onSubmit={handleRsvpSubmit}>
                   <div className="rsvp-form-grid">
                     <label className="rsvp-field">
@@ -494,8 +536,8 @@ export default function App() {
                   </div>
                 </form>
                 <p className="rsvp-help">{t(weddingContent.rsvp.help)}</p>
-                {rsvpFeedback ? (
-                  <p className={`rsvp-feedback ${rsvpStatus === 'success' ? 'is-success' : 'is-error'}`}>{rsvpFeedback}</p>
+                {rsvpFeedback && rsvpStatus === 'error' ? (
+                  <p className="rsvp-feedback is-error">{rsvpFeedback}</p>
                 ) : null}
                 {weddingContent.rsvpEmail !== '[REMPLACER_PAR_EMAIL]' ? (
                   <p className="rsvp-help">

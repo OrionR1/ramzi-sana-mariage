@@ -17,6 +17,12 @@ export type FaqItem = {
   answer: LocalizedText;
 };
 
+export type DaySummaryItem = {
+  time: LocalizedText;
+  title: LocalizedText;
+  body: LocalizedText;
+};
+
 export type GalleryItem = {
   title: LocalizedText;
   caption: LocalizedText;
@@ -117,7 +123,7 @@ export const weddingContent = {
     },
     access: {
       fr: '14h00 — Mairie de Neuilly-sur-Seine\n17h00 — Domaine de la Geneste',
-      en: '2:00 PM — Neuilly-sur-Seine town hall · 5:00 PM — Domaine de la Geneste',
+      en: '2:00 PM — Neuilly-sur-Seine town hall\n5:00 PM — Domaine de la Geneste',
     },
     title: {
       fr: '',
@@ -165,8 +171,38 @@ export const weddingContent = {
       fr:
         'Nous serions très heureux de partager cette journée si spéciale avec vous.\n\nRendez-vous à 14h00 à la mairie de Neuilly-sur-Seine pour notre mariage civil, avant de poursuivre les festivités à partir de 17h00 au Domaine de la Geneste, à Châteaufort.\n\nNous avons hâte de célébrer ce moment entourés des personnes qui comptent le plus pour nous.',
       en:
-        'We would be delighted to welcome you at 2:00 PM to Neuilly-sur-Seine town hall, then at 5:00 PM to Domaine de la Geneste in Châteaufort 78117, to celebrate our wedding. The evening will continue with a cocktail-style dinner, music and dancing — simply, with the people who matter most to us.',
+        'We would be so happy to share this very special day with you.\n\nPlease join us at 2:00 PM at Neuilly-sur-Seine town hall for our civil wedding, before continuing the celebration from 5:00 PM at Domaine de la Geneste, in Châteaufort.\n\nWe cannot wait to celebrate this moment surrounded by the people who mean the most to us.',
     },
+  },
+  dayAtGlance: {
+    title: {
+      fr: 'En un coup d’œil',
+      en: 'At a glance',
+    },
+    items: [
+      {
+        time: { fr: '14h00', en: '2:00 PM' },
+        title: {
+          fr: 'Mairie de Neuilly-sur-Seine',
+          en: 'Neuilly-sur-Seine town hall',
+        },
+        body: {
+          fr: 'Mariage civil et premier temps fort de la journée.',
+          en: 'Civil wedding and the first key moment of the day.',
+        },
+      },
+      {
+        time: { fr: '17h00', en: '5:00 PM' },
+        title: {
+          fr: 'Domaine de la Geneste',
+          en: 'Domaine de la Geneste',
+        },
+        body: {
+          fr: 'Début des festivités, cocktail dînatoire et soirée.',
+          en: 'Celebration begins, followed by dinner cocktail and the evening party.',
+        },
+      },
+    ] as DaySummaryItem[],
   },
   programme: {
     title: {
@@ -227,19 +263,19 @@ export const weddingContent = {
       },
       body: {
         fr: 'La journée débutera dans le cadre élégant et raffiné de la mairie de Neuilly-sur-Seine, où nous aurons la joie de célébrer notre mariage civil entourés de nos proches.\n\nLa cérémonie commencera à 14h, nous comptons donc sur votre ponctualité afin de partager pleinement ce moment si important à nos côtés.',
-        en: 'The day will begin at Neuilly-sur-Seine town hall for the civil ceremony, before continuing at Domaine de la Geneste later in the afternoon.',
+        en: 'The day will begin in the elegant setting of Neuilly-sur-Seine town hall, where we will have the joy of celebrating our civil wedding surrounded by our loved ones.\n\nThe ceremony will begin at 2:00 PM, so we are counting on your punctuality to share this important moment fully by our side.',
       },
       address: {
         fr: '96 Av. Achille Peretti, 92200 Neuilly-sur-Seine, France',
-        en: 'Neuilly-sur-Seine Town Hall, 92200 Neuilly-sur-Seine',
+        en: '96 Av. Achille Peretti, 92200 Neuilly-sur-Seine, France',
       },
       start: {
         fr: '14h00',
         en: '2:00 PM',
       },
       mapCta: {
-        fr: 'Ouvrir dans Google Maps',
-        en: 'Open in Google Maps',
+        fr: 'Voir la mairie sur Google Maps',
+        en: 'View the town hall on Google Maps',
       },
       mapsLink: 'https://www.google.com/maps/search/?api=1&query=Mairie%20de%20Neuilly-sur-Seine',
       image: 'pics/neuilly.jpg',
@@ -272,8 +308,8 @@ export const weddingContent = {
         en: '5:00 PM',
       },
       mapCta: {
-        fr: 'Ouvrir dans Google Maps',
-        en: 'Open in Google Maps',
+        fr: 'Voir le domaine sur Google Maps',
+        en: 'View the estate on Google Maps',
       },
       mapsLink:
         'https://www.google.com/maps/search/?api=1&query=Chemin%20de%20la%20Geneste%2C%2078117%20Ch%C3%A2teaufort%2C%20France',
@@ -293,7 +329,7 @@ export const weddingContent = {
       fr:
         'Venez chic, élégant et fidèle à vous-même!',
       en:
-        'Come chic, elegant, true to yourself — and comfortable enough to dance.',
+        'Come chic, elegant, and true to yourself!',
     },
   },
   rsvp: {
@@ -306,8 +342,8 @@ export const weddingContent = {
       en: 'Please confirm your attendance by June 15, 2026.',
     },
     help: {
-      fr: 'Merci de remplir ce formulaire en quelques secondes.',
-      en: 'Please fill out this form in just a few seconds.',
+      fr: 'Merci de remplir ce formulaire en quelques secondes. Un email de confirmation vous sera envoyé après validation.',
+      en: 'Please fill out this form in just a few seconds. A confirmation email will be sent after submission.',
     },
     primaryCta: {
       fr: "Répondre à l'invitation",
@@ -370,7 +406,19 @@ export const weddingContent = {
       },
       success: {
         fr: 'Merci, votre réponse a bien été enregistrée.',
-        en: 'Thank you, your RSVP has been recorded.',
+        en: 'Thank you, your RSVP has been successfully recorded.',
+      },
+      summaryTitle: {
+        fr: 'Votre réponse a bien été reçue',
+        en: 'Your RSVP has been received',
+      },
+      summaryBody: {
+        fr: 'Un email de confirmation vient de vous être envoyé.',
+        en: 'A confirmation email has just been sent to you.',
+      },
+      editPrompt: {
+        fr: 'Besoin de modifier votre réponse ? Vous pouvez soumettre à nouveau ce formulaire à tout moment.',
+        en: 'Need to update your answer? You can submit this form again at any time.',
       },
       error: {
         fr: "Une erreur s'est produite. Merci de réessayer dans quelques instants.",
