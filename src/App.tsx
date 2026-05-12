@@ -171,14 +171,11 @@ export default function App() {
     });
 
     try {
-      const response = await fetch(weddingContent.rsvpEndpoint, {
+      await fetch(weddingContent.rsvpEndpoint, {
         method: 'POST',
+        mode: 'no-cors',
         body: payload,
       });
-
-      if (!response.ok) {
-        throw new Error(`RSVP failed with status ${response.status}`);
-      }
 
       setRsvpStatus('success');
       setRsvpFeedback(t(weddingContent.rsvp.form.success));
