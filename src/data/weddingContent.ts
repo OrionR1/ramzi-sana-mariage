@@ -55,7 +55,7 @@ export const weddingContent = {
   mapsLink:
     'https://www.google.com/maps/search/?api=1&query=Chemin%20de%20la%20Geneste%2C%2078117%20Ch%C3%A2teaufort%2C%20France',
   rsvpLink: '#rsvp',
-  rsvpEndpoint: '[REMPLACER_PAR_URL_APPS_SCRIPT]',
+  rsvpEndpoint: 'https://script.google.com/macros/s/AKfycbw9iKRx-NqDlYPsWb5cJAtL5kLK4EjJ4Emk4SZ4s_F1kKRf6w-BhvsTypZ1dDwyt1kn/exec',
   rsvpEmail: '[REMPLACER_PAR_EMAIL]',
   rsvpDeadline: {
     fr: '15 juin 2026',
