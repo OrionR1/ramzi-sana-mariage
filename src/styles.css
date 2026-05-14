@@ -303,7 +303,7 @@ main,
   position: relative;
   width: min(100%, 430px);
   margin: 0 auto 1.35rem;
-  padding: 1.1rem 0 0.45rem;
+  padding: 0.35rem 0 0.45rem;
 }
 
 .gate-polaroid {
@@ -312,23 +312,6 @@ main,
   box-shadow:
     0 18px 36px rgba(44, 30, 24, 0.14),
     0 2px 8px rgba(44, 30, 24, 0.06);
-}
-
-.gate-polaroid-back {
-  position: absolute;
-  inset: 0.6rem 1rem auto;
-  height: calc(100% - 1.2rem);
-  border: 1px solid rgba(68, 53, 45, 0.08);
-  background:
-    linear-gradient(180deg, rgba(255, 254, 251, 0.98), rgba(248, 243, 236, 0.96));
-}
-
-.gate-polaroid-back-left {
-  transform: rotate(-8deg) translateX(-1rem);
-}
-
-.gate-polaroid-back-right {
-  transform: rotate(7deg) translateX(1rem);
 }
 
 .gate-polaroid-front {
@@ -355,27 +338,29 @@ main,
 
 .gate-polaroid-caption {
   display: grid;
-  justify-items: start;
-  gap: 0.2rem;
+  justify-items: center;
+  gap: 0.28rem;
   padding: 0.95rem 0.2rem 0;
-  text-align: left;
+  text-align: center;
 }
 
-.gate-signature,
-.gate-date-script {
-  font-family: 'Allura', 'Brush Script MT', cursive;
-  color: #503c34;
+.gate-polaroid-names,
+.gate-polaroid-date {
+  font-family: 'Cormorant Garamond', serif;
+  color: #2d201b;
 }
 
-.gate-signature {
-  font-size: clamp(2.8rem, 8vw, 4.5rem);
-  line-height: 0.92;
+.gate-polaroid-names {
+  font-size: clamp(2.3rem, 6.8vw, 3.7rem);
+  line-height: 0.96;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.gate-date-script {
-  font-size: clamp(1.35rem, 4vw, 2rem);
+.gate-polaroid-date {
+  font-size: clamp(1.3rem, 3vw, 1.85rem);
   line-height: 1;
-  margin-left: 0.08rem;
+  letter-spacing: 0.02em;
 }
 
 .gate-overline,
@@ -507,7 +492,7 @@ main,
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.2rem;
+  gap: 0;
   color: var(--text);
 }
 
@@ -516,13 +501,6 @@ main,
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.gate-seal-core small {
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.9;
 }
 
 .gate-hint {
@@ -1409,12 +1387,12 @@ main {
     padding: 0.78rem 0.78rem 0.95rem;
   }
 
-  .gate-signature {
-    font-size: clamp(2.25rem, 11vw, 3.6rem);
+  .gate-polaroid-names {
+    font-size: clamp(1.85rem, 9.2vw, 3rem);
   }
 
-  .gate-date-script {
-    font-size: clamp(1.1rem, 5vw, 1.6rem);
+  .gate-polaroid-date {
+    font-size: clamp(1.05rem, 5vw, 1.45rem);
   }
 
   .gate-body {

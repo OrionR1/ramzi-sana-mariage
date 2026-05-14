@@ -244,15 +244,13 @@ export default function App() {
           <div className="gate-marquee" aria-hidden="true" />
           <div className="gate-card">
             <div className="gate-polaroid-stack" aria-label={weddingContent.couple}>
-              <div className="gate-polaroid gate-polaroid-back gate-polaroid-back-left" aria-hidden="true" />
-              <div className="gate-polaroid gate-polaroid-back gate-polaroid-back-right" aria-hidden="true" />
               <figure className="gate-polaroid gate-polaroid-front">
                 <div className="gate-photo-frame">
                   <img src={assetUrl(weddingContent.images.intro)} alt={weddingContent.couple} />
                 </div>
                 <figcaption className="gate-polaroid-caption">
-                  <span className="gate-signature">{weddingContent.couple}</span>
-                  <span className="gate-date-script">{t(weddingContent.intro.title)}</span>
+                  <span className="gate-polaroid-names">{weddingContent.couple}</span>
+                  <span className="gate-polaroid-date">{t(weddingContent.intro.title)}</span>
                 </figcaption>
               </figure>
             </div>
@@ -271,7 +269,6 @@ export default function App() {
             <button type="button" className="gate-seal-button" onClick={openInvitation}>
               <span className="gate-seal-core">
                 <strong>{t(weddingContent.intro.cta)}</strong>
-                <small>{weddingContent.date.display[language]}</small>
               </span>
             </button>
             <p className="gate-hint">{t(weddingContent.intro.hint)}</p>
