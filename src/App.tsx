@@ -243,16 +243,24 @@ export default function App() {
           <div className="gate-orbit gate-orbit-two" aria-hidden="true" />
           <div className="gate-marquee" aria-hidden="true" />
           <div className="gate-card">
-            <p className="gate-overline">{t(weddingContent.intro.overline)}</p>
-            <h2 className="gate-couple" aria-label={weddingContent.couple}>
-              <span>{weddingContent.names.first}</span>
-              <span className="gate-ampersand">&amp;</span>
-              <span>{weddingContent.names.second}</span>
-            </h2>
-            <div className="gate-copy">
-              <p className="gate-title">{t(weddingContent.intro.title)}</p>
-              {introBody ? <p className="gate-body">{introBody}</p> : null}
+            <div className="gate-polaroid-stack" aria-label={weddingContent.couple}>
+              <div className="gate-polaroid gate-polaroid-back gate-polaroid-back-left" aria-hidden="true" />
+              <div className="gate-polaroid gate-polaroid-back gate-polaroid-back-right" aria-hidden="true" />
+              <figure className="gate-polaroid gate-polaroid-front">
+                <div className="gate-photo-frame">
+                  <img src={assetUrl(weddingContent.images.intro)} alt={weddingContent.couple} />
+                </div>
+                <figcaption className="gate-polaroid-caption">
+                  <span className="gate-signature">{weddingContent.couple}</span>
+                  <span className="gate-date-script">{t(weddingContent.intro.title)}</span>
+                </figcaption>
+              </figure>
             </div>
+            {introBody ? (
+              <div className="gate-copy">
+                <p className="gate-body">{introBody}</p>
+              </div>
+            ) : null}
             <div className="gate-language">
               <LanguageSwitch
                 language={language}

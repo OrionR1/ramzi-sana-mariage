@@ -256,7 +256,7 @@ main,
 .gate-stage {
   width: min(100%, 720px);
   position: relative;
-  padding: 2.25rem 1rem 1rem;
+  padding: 2rem 1rem 1rem;
   z-index: 2;
 }
 
@@ -273,7 +273,7 @@ main,
 
 .gate-card {
   position: relative;
-  padding: 3.2rem 1.8rem 2rem;
+  padding: 2.1rem 1.55rem 1.8rem;
   border-radius: 32px;
   background:
     linear-gradient(180deg, rgba(255, 252, 247, 0.92), rgba(247, 242, 235, 0.98));
@@ -297,6 +297,85 @@ main,
     linear-gradient(135deg, transparent 0, transparent 42%, rgba(215, 185, 167, 0.06) 50%, transparent 58%, transparent 100%),
     radial-gradient(circle at 50% 0%, rgba(215, 185, 167, 0.08), transparent 30%);
   pointer-events: none;
+}
+
+.gate-polaroid-stack {
+  position: relative;
+  width: min(100%, 430px);
+  margin: 0 auto 1.35rem;
+  padding: 1.1rem 0 0.45rem;
+}
+
+.gate-polaroid {
+  border-radius: 4px;
+  background: #fffdfa;
+  box-shadow:
+    0 18px 36px rgba(44, 30, 24, 0.14),
+    0 2px 8px rgba(44, 30, 24, 0.06);
+}
+
+.gate-polaroid-back {
+  position: absolute;
+  inset: 0.6rem 1rem auto;
+  height: calc(100% - 1.2rem);
+  border: 1px solid rgba(68, 53, 45, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 254, 251, 0.98), rgba(248, 243, 236, 0.96));
+}
+
+.gate-polaroid-back-left {
+  transform: rotate(-8deg) translateX(-1rem);
+}
+
+.gate-polaroid-back-right {
+  transform: rotate(7deg) translateX(1rem);
+}
+
+.gate-polaroid-front {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 1.05rem 1.05rem 1.3rem;
+  border: 1px solid rgba(68, 53, 45, 0.08);
+  transform: rotate(-2.5deg);
+}
+
+.gate-photo-frame {
+  aspect-ratio: 0.82;
+  overflow: hidden;
+  background: #eadfce;
+}
+
+.gate-photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gate-polaroid-caption {
+  display: grid;
+  justify-items: start;
+  gap: 0.2rem;
+  padding: 0.95rem 0.2rem 0;
+  text-align: left;
+}
+
+.gate-signature,
+.gate-date-script {
+  font-family: 'Allura', 'Brush Script MT', cursive;
+  color: #503c34;
+}
+
+.gate-signature {
+  font-size: clamp(2.8rem, 8vw, 4.5rem);
+  line-height: 0.92;
+}
+
+.gate-date-script {
+  font-size: clamp(1.35rem, 4vw, 2rem);
+  line-height: 1;
+  margin-left: 0.08rem;
 }
 
 .gate-overline,
@@ -346,7 +425,7 @@ main,
 .gate-copy {
   display: grid;
   gap: 0.4rem;
-  margin: 1.35rem 0 1.1rem;
+  margin: 0.2rem 0 1rem;
 }
 
 .gate-title {
@@ -380,7 +459,7 @@ main,
 .gate-language {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .gate-seal-button {
@@ -1318,15 +1397,24 @@ main {
   }
 
   .gate-card {
-    padding: 2.4rem 1rem 1.35rem;
+    padding: 1.45rem 0.95rem 1.2rem;
   }
 
-  .gate-card h2 {
-    font-size: clamp(2.8rem, 18vw, 4.7rem);
+  .gate-polaroid-stack {
+    width: min(100%, 310px);
+    margin-bottom: 1rem;
   }
 
-  .gate-title {
-    font-size: 0.92rem;
+  .gate-polaroid-front {
+    padding: 0.78rem 0.78rem 0.95rem;
+  }
+
+  .gate-signature {
+    font-size: clamp(2.25rem, 11vw, 3.6rem);
+  }
+
+  .gate-date-script {
+    font-size: clamp(1.1rem, 5vw, 1.6rem);
   }
 
   .gate-body {
