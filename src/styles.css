@@ -320,7 +320,7 @@ main,
   margin: 0;
   padding: 1.05rem 1.05rem 1.3rem;
   border: 1px solid rgba(68, 53, 45, 0.08);
-  transform: rotate(-2.5deg);
+  transform: none;
 }
 
 .gate-photo-frame {
@@ -351,16 +351,18 @@ main,
 }
 
 .gate-polaroid-names {
-  font-size: clamp(2.3rem, 6.8vw, 3.7rem);
-  line-height: 0.96;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: clamp(1.9rem, 5.2vw, 2.95rem);
+  line-height: 1;
+  letter-spacing: 0.015em;
+  font-weight: 500;
+  text-transform: none;
 }
 
 .gate-polaroid-date {
-  font-size: clamp(1.3rem, 3vw, 1.85rem);
+  font-size: clamp(1.12rem, 2.4vw, 1.45rem);
   line-height: 1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  opacity: 0.9;
 }
 
 .gate-overline,
@@ -1388,11 +1390,11 @@ main {
   }
 
   .gate-polaroid-names {
-    font-size: clamp(1.85rem, 9.2vw, 3rem);
+    font-size: clamp(1.55rem, 7.2vw, 2.35rem);
   }
 
   .gate-polaroid-date {
-    font-size: clamp(1.05rem, 5vw, 1.45rem);
+    font-size: clamp(0.96rem, 4.2vw, 1.2rem);
   }
 
   .gate-body {
