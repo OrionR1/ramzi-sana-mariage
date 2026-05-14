@@ -170,7 +170,7 @@ export const weddingContent = {
     },
     body: {
       fr:
-        'Nous serions très heureux de partager cette journée si spéciale avec vous.\n\nRendez-vous à 14h00 à la mairie de Neuilly-sur-Seine pour notre mariage civil, avant de poursuivre les festivités à partir de 17h00 au Domaine de la Geneste, à Châteaufort.\n\nNous avons hâte de célébrer ce moment entourés des personnes qui comptent le plus pour nous.',
+        'Nous serions très heureux de partager cette journée si spéciale avec vous.\n\nRendez-vous à 14h00 à la mairie de Neuilly-sur-Seine pour notre mariage civil, avant de poursuivre les festivités à 17h00 au Domaine de la Geneste, à Châteaufort.\n\nNous avons hâte de célébrer ce moment entourés des personnes qui comptent le plus pour nous.',
       en:
         'We would be so happy to share this very special day with you.\n\nPlease join us at 2:00 PM at Neuilly-sur-Seine town hall for our civil wedding, before continuing the celebration from 5:00 PM at Domaine de la Geneste, in Châteaufort.\n\nWe cannot wait to celebrate this moment surrounded by the people who mean the most to us.',
     },
@@ -228,7 +228,7 @@ export const weddingContent = {
         label: { fr: 'Arrivée sur les lieux et vin d’honneur avec les mariés', en: 'Arrival at the venue and welcome drinks with the newlyweds' },
       },
       {
-        time: '19h30',
+        time: '19h00',
         label: { fr: 'Cocktail dînatoire', en: 'Cocktail-style dinner' },
       },
       {
